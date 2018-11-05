@@ -1,0 +1,38 @@
+:root {
+	--font-primary: Futura, sans-serif;
+	--font-secondary: 'andola mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--font-primary);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+p {
+	font-family: var(--font-secondary);
+	line-height: 1.6;
+}
+
+button {
+	border: none;
+	border-radius: 1rem;
+	background-color: #4a4a4a;
+	color: #fff;
+	padding: 0.8rem 1rem;
+}
