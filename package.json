@@ -1,0 +1,39 @@
+{
+	"name": "website-everything-web-redesign",
+	"version": "0.0.1",
+	"description": "Minor website- Everything Web redesign",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm run dev",
+		"dev-s": "webpack-serve --config=./config/webpack.config.js",
+		"dev": "webpack-dev-server --env=development --config=./config/webpack.config.js",
+		"build": "webpack --env=production --config=./config/webpack.config.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kyunwang/xxx.git"
+	},
+	"keywords": [],
+	"author": "Kang Yun Wang <kevinwang8011@hotmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": ""
+	},
+	"homepage": "",
+	"devDependencies": {
+		"css-loader": "^1.0.0",
+		"dotenv": "^6.0.0",
+		"fast-sass-loader": "^1.4.5",
+		"html-webpack-plugin": "^3.2.0",
+		"node-sass": "^4.9.4",
+		"preload-webpack-plugin": "^2.3.0",
+		"prettier": "^1.13.7",
+		"style-loader": "^0.21.0",
+		"webpack": "^4.16.0",
+		"webpack-cli": "^3.0.8",
+		"webpack-dev-server": "^3.1.4",
+		"webpack-merge": "^4.1.3",
+		"webpack-serve": "^2.0.2"
+	}
+}
