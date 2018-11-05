@@ -1,2 +1,14 @@
 .menu__container {
+	@include media-desktop-hd {
+		display: flex;
+		position: absolute;
+		transform: rotate(-90deg);
+		transform-origin: 0% 0%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: max-content;
+		margin: auto;
+	}
 }
