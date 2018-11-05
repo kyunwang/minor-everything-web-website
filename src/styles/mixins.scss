@@ -1,0 +1,10 @@
+@mixin media-desktop-l {
+	@media only screen and (min-width: 70rem) {
+		@content;
+	}
+}
+@mixin media-desktop-hd {
+	@media only screen and (min-width: 40rem) and(max-width: 70rem) {
+		@content;
+	}
+}

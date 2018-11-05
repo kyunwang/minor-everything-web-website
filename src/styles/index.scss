@@ -1,6 +1,20 @@
-body {
-	background: cornsilk;
-	p {
-		color: red;
-	}
+/* Add hover/focus styling */
+@import './menu.scss';
+@import './header.scss';
+@import './intro.scss';
+@import './quiz.scss';
+@import './program.scss';
+@import './signup.scss';
+
+:root {
+	--font-primary: Futura, sans-serif;
+	--font-secondary: 'andola mono', monospace;
+}
+
+html {
+	font-family: var(--font-primary);
+}
+
+p {
+	font-family: var(--font-secondary);
 }

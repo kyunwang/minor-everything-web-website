@@ -5,7 +5,7 @@ exports.devServer = ({ host, port } = {}) => ({
 	serve: {
 		host,
 		port,
-		open: true,
+		open: false,
 	},
 	/*==========================
 	=== Config for webpack dev server - Choose either this or serve
@@ -14,7 +14,7 @@ exports.devServer = ({ host, port } = {}) => ({
 		stats: 'errors-only',
 		host,
 		port,
-		open: true,
+		open: false,
 		overlay: true,
 	},
 });
