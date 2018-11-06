@@ -1,14 +1,18 @@
 .menu__container {
+	a {
+		text-decoration: none;
+	}
+
+	li {
+		margin: 0 0.8rem;
+	}
+
 	@include media-desktop-hd {
 		display: flex;
-		position: absolute;
-		transform: rotate(-90deg);
-		transform-origin: 0% 0%;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		height: max-content;
-		margin: auto;
+		position: fixed;
+		transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+		top: 50%;
+		left: 3%;
+		justify-content: center;
 	}
 }
