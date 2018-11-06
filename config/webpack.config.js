@@ -32,6 +32,7 @@ const baseConfig = webpackMerge([
 	},
 	// parts.loadCss(),
 	parts.loadSass(),
+	parts.loadCssSVG(),
 ]);
 
 /*==========================

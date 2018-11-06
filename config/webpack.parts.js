@@ -24,3 +24,16 @@ exports.loadSass = ({ include, exclude } = {}) => ({
 		],
 	},
 });
+
+exports.loadCssSVG = ({ include, exclude } = {}) => ({
+	module: {
+		rules: [
+			{
+				test: /\.svg/,
+				use: {
+					loader: 'svg-url-loader',
+				},
+			},
+		],
+	},
+});
