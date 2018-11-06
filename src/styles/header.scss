@@ -1,7 +1,11 @@
 .header__container {
-	height: 80%;
-	max-width: 80%;
+	height: 70vh;
 	margin: auto;
+	padding: 10% 10% 10%;
+	background-image: url(../assets/main_blob.svg);
+	background-size: 70vw;
+	background-repeat: no-repeat;
+	background-position: 0 0;
 
 	h1 {
 		font-size: calc(1.8rem + 2.5vw);
@@ -26,5 +30,6 @@
 	}
 
 	@include media-desktop-l {
+		background-size: 55vw;
 	}
 }

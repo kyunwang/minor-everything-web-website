@@ -7,12 +7,12 @@
 		margin: 0 0.8rem;
 	}
 
-	@include media-desktop-hd {
-		display: flex;
-		position: fixed;
-		transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-		top: 50%;
-		left: 3%;
-		justify-content: center;
-	}
+	// @include media-desktop-hd {
+	display: flex;
+	position: fixed;
+	transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+	top: 50%;
+	left: 1.4rem;
+	justify-content: center;
+	// }
 }
