@@ -1,0 +1,14 @@
+.intro__container {
+	@include background-image('../assets//intro_blob.svg', 85%, 30vw);
+	height: 70vh;
+	padding-left: 20%;
+	padding-right: 10%;
+
+	h2 {
+		margin-bottom: 1.2rem;
+	}
+
+	p {
+		padding-left: 10%;
+	}
+}

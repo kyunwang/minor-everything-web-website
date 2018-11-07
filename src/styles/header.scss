@@ -1,14 +1,11 @@
 .header__container {
-	height: 70vh;
+	@include background-image('../assets/main_blob.svg', 0 0);
+	height: 60vh;
 	margin: auto;
 	padding: 10% 10% 10%;
-	background-image: url(../assets/main_blob.svg);
-	background-size: 70vw;
-	background-repeat: no-repeat;
-	background-position: 0 0;
 
 	h1 {
-		font-size: calc(1.8rem + 2.5vw);
+		font-size: calc(1.6rem + 2.5vw);
 		margin-bottom: 1rem;
 	}
 
@@ -27,9 +24,14 @@
 	}
 
 	@include media-desktop-hd {
+		height: 75vh;
+		h1 {
+			font-size: calc(1.8rem + 2.5vw);
+		}
 	}
 
 	@include media-desktop-l {
+		height: 85vh;
 		background-size: 55vw;
 	}
 }

@@ -8,3 +8,12 @@
 		@content;
 	}
 }
+
+@mixin background-image($url, $position, $size: 70vw) {
+	background: {
+		image: url($url);
+		position: $position;
+		size: $size;
+		repeat: no-repeat;
+	}
+}
