@@ -10,5 +10,9 @@
 
 	p {
 		padding-left: 10%;
+
+		@include media-desktop-l {
+			width: 78%;
+		}
 	}
 }
