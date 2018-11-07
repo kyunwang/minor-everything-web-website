@@ -1,103 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Minor Everything Web</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Minor Everything Web</title>
-</head>
-
-<body>
-	<ul class="menu__container">
-		<li><a href="#">Is this you?</a></li>
-		<li><a href="#">About you</a></li>
-		<li><a href="#">Program</a></li>
-		<li><a href="#">Signup</a></li>
-	</ul>
-
-	<section class="header__container">
-		<h1>Minor <br> Webdevelopment</h1>
-		<p>Ready to explore the web with us?</p>
-		<button>Let's explore!</button>
-	</section>
-
-	<section class="intro__container">
-		<h2>Ready to up your tech game?</h2>
-		<p>
-			Are you always ready to learn something? Love to hear about the newest technologies on the web? Love to better
-			your technical (design) skills? Dreaming of Real-time. Responsive and Reactive or wanting to learn about it? Then
-			this is the minor you are looking for!</p>
-	</section>
-
-	<section class="quiz__container">
-		<h2>Tell us about you!</h2>
-
-		<section class="quiz__question-1">
-
-			<aside class="quiz__editor-container">
-				<ul class="quiz__menu">
-					<li>Reset</li>
-					<li>Style for me</li>
-					<li>Close</li>
-				</ul>
-
-				<textarea name="" id="" cols="30" rows="10">
-
-				</textarea>
-			</aside>
-
-			<div>
-				<p>Would you like to learn and share knowledge with other students?</p>
-				<ul>
-					<li><input type="radio" name="question-1" id="question-1-a-1"><label for="question-1-a-1">I sure do!</label></li>
-					<li><input type="radio" name="question-1" id="question-1-a-2"><label for="question-1-a-2">I like to learn alone</label></li>
-					<li><input type="radio" name="question-1" id="question-1-a-3"><label for="question-1-a-3">Not sure about this</label></li>
-				</ul>
-			</div>
-		</section>
-
-		<section class="quiz__question-2">
-			<p>Getting enthousiastic about any of the following?</p>
-			<ul>
-				<li><label for="question-2-a-1"><input type="checkbox" name="question-2" id="question-2-a-1">Node.js</label></li>
-				<li><label for="question-2-a-2"><input type="checkbox" name="question-2" id="question-2-a-2">Interaction Design</label></li>
-				<li><label for="question-2-a-3"><input type="checkbox" name="question-2" id="question-2-a-3">Progressive
-						Enhancement</label></li>
-				<li><label for="question-2-a-4"><input type="checkbox" name="question-2" id="question-2-a-4">Accessibility</label></li>
-				<li><label for="question-2-a-5"><input type="checkbox" name="question-2" id="question-2-a-5">Inclusive Design</label></li>
-				<li><label for="question-2-a-6"><input type="checkbox" name="question-2" id="question-2-a-6">Real Time Web</label></li>
-				<li><label for="question-2-a-7"><input type="checkbox" name="question-2" id="question-2-a-7">Performance</label></li>
-				<li><label for="question-2-a-8"><input type="checkbox" name="question-2" id="question-2-a-8">Responsiveness</label></li>
-				<li><label for="question-2-a-9"><input type="checkbox" name="question-2" id="question-2-a-9">Browser Compatability</label></li>
-				<li><label for="question-2-a-10"><input type="checkbox" name="question-2" id="question-2-a-10">Progressive Web Apps</label></li>
-			</ul>
-		</section>
-
-		<section class="quiz__question-3">
-			<p>Are you intereseted in learning about...</p>
-			<ul>
-				<li><label for="question-3-a-1"><input type="checkbox" name="question-3" id="question-3-a-1">Designing for users</label></li>
-				<li><label for="question-3-a-2"><input type="checkbox" name="question-3" id="question-3-a-2">Creating user
-						experiences</label></li>
-				<li><label for="question-3-a-3"><input type="checkbox" name="question-3" id="question-3-a-3">Web sockets</label></li>
-				<li><label for="question-3-a-4"><input type="checkbox" name="question-3" id="question-3-a-4">Server Side JavaScript</label></li>
-			</ul>
-		</section>
-	</section>
-
-	<section class="program__container">
-		<ul>
-			<li><label for="program-1"><input type="checkbox" name="program" id="program-1"></label></li>
-			<li><label for="program-2"><input type="checkbox" name="program" id="program-2"></label></li>
-			<li><label for=""><input type="checkbox" name="" id=""></label></li>
-			<li><label for=""><input type="checkbox" name="" id=""></label></li>
-			<li><label for=""><input type="checkbox" name="" id=""></label></li>
+	<body>
+		<ul class="menu__container">
+			<li><a href="#">Is this you?</a></li>
+			<li><a href="#">About you</a></li>
+			<li><a href="#">Program</a></li>
+			<li><a href="#">Signup</a></li>
 		</ul>
 
-	</section>
+		<section class="header__container">
+			<h1>
+				Minor <br />
+				Webdevelopment
+			</h1>
+			<p>Ready to explore the web with us?</p>
+			<button>Let's explore!</button>
+		</section>
 
+		<section class="intro__container">
+			<h2>Ready to up your tech game?</h2>
+			<p>
+				Are you always ready to learn something? Love to hear about the newest technologies on the
+				web? Love to better your technical (design) skills? Dreaming of Real-time. Responsive and
+				Reactive or wanting to learn about it? Then this is the minor you are looking for!
+			</p>
+		</section>
 
+		<section class="quiz__container">
+			<h2>Tell us about you!</h2>
 
-</body>
+			<section class="quiz__question-container quiz__question-1">
+				<aside class="quiz__editor-container">
+					<ul class="quiz__menu">
+						<li>Reset</li>
+						<li>Style for me</li>
+						<li>Close</li>
+					</ul>
 
+					<textarea name="" id="" cols="30" rows="10"> </textarea>
+				</aside>
+
+				<div>
+					<p>Would you like to learn and share knowledge with other students?</p>
+					<ul>
+						<li>
+							<input type="radio" name="question-1" id="question-1-a-1" /><label
+								for="question-1-a-1"
+								>I sure do!</label
+							>
+						</li>
+						<li>
+							<input type="radio" name="question-1" id="question-1-a-2" /><label
+								for="question-1-a-2"
+								>I like to learn alone</label
+							>
+						</li>
+						<li>
+							<input type="radio" name="question-1" id="question-1-a-3" /><label
+								for="question-1-a-3"
+								>Not sure about this</label
+							>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="quiz__question-container quiz__question-2">
+				<p>Getting enthousiastic about any of the following?</p>
+				<ul>
+					<li>
+						<label for="question-2-a-1"
+							><input type="checkbox" name="question-2" id="question-2-a-1" />Node.js</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-2"
+							><input type="checkbox" name="question-2" id="question-2-a-2" />Interaction
+							Design</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-3"
+							><input type="checkbox" name="question-2" id="question-2-a-3" />Progressive
+							Enhancement</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-4"
+							><input type="checkbox" name="question-2" id="question-2-a-4" />Accessibility</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-5"
+							><input type="checkbox" name="question-2" id="question-2-a-5" />Inclusive
+							Design</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-6"
+							><input type="checkbox" name="question-2" id="question-2-a-6" />Real Time Web</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-7"
+							><input type="checkbox" name="question-2" id="question-2-a-7" />Performance</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-8"
+							><input type="checkbox" name="question-2" id="question-2-a-8" />Responsiveness</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-9"
+							><input type="checkbox" name="question-2" id="question-2-a-9" />Browser
+							Compatability</label
+						>
+					</li>
+					<li>
+						<label for="question-2-a-10"
+							><input type="checkbox" name="question-2" id="question-2-a-10" />Progressive Web
+							Apps</label
+						>
+					</li>
+				</ul>
+			</section>
+
+			<section class="quiz__question-container quiz__question-3">
+				<p>Are you intereseted in learning about...</p>
+				<ul>
+					<li>
+						<label for="question-3-a-1"
+							><input type="checkbox" name="question-3" id="question-3-a-1" />Designing for
+							users</label
+						>
+					</li>
+					<li>
+						<label for="question-3-a-2"
+							><input type="checkbox" name="question-3" id="question-3-a-2" />Creating user
+							experiences</label
+						>
+					</li>
+					<li>
+						<label for="question-3-a-3"
+							><input type="checkbox" name="question-3" id="question-3-a-3" />Web sockets</label
+						>
+					</li>
+					<li>
+						<label for="question-3-a-4"
+							><input type="checkbox" name="question-3" id="question-3-a-4" />Server Side
+							JavaScript</label
+						>
+					</li>
+				</ul>
+			</section>
+		</section>
+
+		<section class="program__container">
+			<ul>
+				<li>
+					<label for="program-1"><input type="checkbox" name="program" id="program-1"/></label>
+				</li>
+				<li>
+					<label for="program-2"><input type="checkbox" name="program" id="program-2"/></label>
+				</li>
+				<li>
+					<label for=""><input type="checkbox" name="" id=""/></label>
+				</li>
+				<li>
+					<label for=""><input type="checkbox" name="" id=""/></label>
+				</li>
+				<li>
+					<label for=""><input type="checkbox" name="" id=""/></label>
+				</li>
+			</ul>
+		</section>
+	</body>
 </html>
