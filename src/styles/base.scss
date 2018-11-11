@@ -9,6 +9,9 @@
 	--indent-2: 20%;
 	--indent-3: 5%;
 
+	--yellow: #fbcb7c;
+	--grey-dark: #4a4a4a;
+
 	@include media-desktop-hd {
 		--font-title: calc(1.4rem + 2.5vw);
 	}
