@@ -1,15 +1,15 @@
 .intro__container {
 	@include background-image('../assets//intro_blob.svg', 85%, 30vw);
 	height: 70vh;
-	padding-left: 20%;
-	padding-right: 10%;
+	padding-left: var(--indent-2);
+	padding-right: var(--indent-1);
 
 	h2 {
 		margin-bottom: 1.2rem;
 	}
 
 	p {
-		padding-left: 10%;
+		padding-left: var(--indent-1);
 
 		@include media-desktop-l {
 			width: 78%;

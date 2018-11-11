@@ -2,7 +2,7 @@
 	@include background-image('../assets/main_blob.svg', 0 0);
 	height: 60vh;
 	margin: auto;
-	padding: 10% 10% 10%;
+	padding: 10% var(--indent-1) 10%;
 
 	h1 {
 		font-size: calc(1.6rem + 2.5vw);

@@ -1,0 +1,36 @@
+.program__container {
+	padding-left: var(--indent-1);
+
+	p {
+		padding-left: var(--indent-3);
+	}
+
+	& > p {
+		margin-bottom: 5%;
+	}
+
+	label {
+		font-size: var(--font-title-sub);
+		font-weight: 700;
+	}
+
+	[type='checkbox'] {
+		position: absolute;
+		opacity: 0;
+
+		&:checked ~ label {
+			// outline: dotted lightseagreen 0.2rem;
+		}
+
+		&:focus {
+			& ~ label {
+				/* TEMPORARY OUTLINE */
+				outline: dotted lightseagreen 0.2rem;
+			}
+		}
+	}
+}
+
+.program__description {
+	// padding-left: var(--indent-3);
+}

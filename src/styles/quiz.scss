@@ -3,5 +3,25 @@
 }
 
 .quiz__question-container {
-	padding-left: 10%;
+	padding-left: var(--indent-1);
+	p {
+		font-family: var(--font-primary);
+		font-weight: 700;
+		line-height: 1.4;
+		font-size: calc(1rem + 1vw);
+	}
+
+	ul {
+	}
+
+	li {
+		font-family: var(--font-secondary);
+		font-size: var(--font-content);
+	}
+
+	label {
+	}
+
+	[type='checkbox'] {
+	}
 }

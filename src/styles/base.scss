@@ -2,7 +2,12 @@
 	--font-primary: Futura, sans-serif;
 	--font-secondary: 'andola mono', monospace;
 	--font-title: calc(1.2rem + 2vw);
+	--font-title-sub: calc(1.1rem + 1vw);
 	--font-content: calc(1rem + 0.5vw);
+
+	--indent-1: 10%;
+	--indent-2: 20%;
+	--indent-3: 5%;
 
 	@include media-desktop-hd {
 		--font-title: calc(1.4rem + 2.5vw);
