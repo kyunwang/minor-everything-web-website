@@ -1,5 +1,5 @@
 .intro__container {
-	@include background-image('../assets//intro_blob.svg', 85%, 28vw);
+	@include background-image('../assets//intro_blob.svg', 85%, 24vw);
 	margin-bottom: 8rem;
 	padding-left: var(--indent-2);
 	padding-right: var(--indent-1);
