@@ -11,7 +11,7 @@
 	}
 
 	& > p {
-		margin-bottom: 5%;
+		margin-bottom: 2.4rem;
 	}
 
 	label {
@@ -50,7 +50,7 @@
 		&:focus {
 			& ~ label {
 				/* TEMPORARY OUTLINE */
-				outline: dotted lightseagreen 0.2rem;
+				outline: var(--outline);
 				&::before {
 					transform: translateX(-75%);
 				}
@@ -118,7 +118,7 @@
 		vertical-align: middle;
 		z-index: -1;
 
-		&::after {
+		&::before {
 			content: '';
 			position: absolute;
 			left: -16.7%;
