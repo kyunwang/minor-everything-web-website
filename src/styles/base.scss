@@ -12,6 +12,10 @@
 	--yellow: #fbcb7c;
 	--grey-dark: #4a4a4a;
 
+	--anim-cubic-primary: ease-in-out;
+	// --anim-cubic-primary: cubic-bezier(0.48, 0.92, 0.65, 0.99);
+	--anim-time-primary: 0.3s;
+
 	@include media-desktop-hd {
 		--font-title: calc(1.4rem + 2.5vw);
 	}
