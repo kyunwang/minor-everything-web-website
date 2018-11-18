@@ -39,7 +39,7 @@
 		&:hover,
 		&:focus {
 			&::before {
-				transform: translateX(100%);
+				transform: translateX(-75%);
 			}
 		}
 	}
@@ -52,7 +52,7 @@
 			& ~ label {
 				// outline: dotted lightseagreen 0.2rem;
 				&::before {
-					transform: translateX(300%) scale(0.5);
+					transform: translateX(-75%) scale(0.5);
 				}
 			}
 

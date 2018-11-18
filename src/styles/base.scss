@@ -71,3 +71,7 @@ button {
 	color: #fff;
 	padding: 0.8rem 1rem;
 }
+
+:focus {
+	outline: dotted lightseagreen 0.2rem;
+}
