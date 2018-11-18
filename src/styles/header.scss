@@ -23,11 +23,14 @@
 	button {
 	}
 
-	@include media-desktop-hd {
-		height: 75vh;
+	@include media-desktop {
 		h1 {
 			font-size: calc(1.8rem + 2.5vw);
 		}
+	}
+
+	@include media-desktop-hd {
+		height: 75vh;
 	}
 
 	@include media-desktop-l {

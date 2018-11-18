@@ -1,6 +1,10 @@
 .program__container {
 	padding-left: var(--indent-1);
 
+	h2 {
+		margin-bottom: 0.8rem;
+	}
+
 	p,
 	aside {
 		padding-left: var(--indent-3);
@@ -65,7 +69,7 @@
 			}
 		}
 
-		@include media-desktop-hd {
+		@include media-desktop {
 			&:checked {
 				& ~ .program__description {
 					max-height: 30rem;
@@ -125,7 +129,7 @@
 		}
 	}
 
-	@include media-desktop-hd {
+	@include media-desktop {
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 		p {

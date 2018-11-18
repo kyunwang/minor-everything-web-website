@@ -19,7 +19,7 @@
 	justify-content: center;
 	width: 100%;
 
-	@include media-desktop-hd {
+	@include media-desktop {
 		transform: translateX(-50%) translateY(-50%) rotate(-90deg);
 	}
 }
