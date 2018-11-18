@@ -1,19 +1,25 @@
 .menu__container {
 	a {
+		display: inline-block;
+		width: max-content;
 		text-decoration: none;
 	}
 
 	li {
+		width: max-content;
 		margin: 0 0.8rem;
 	}
 
-	// @include media-desktop-hd {
 	display: flex;
+	flex-direction: row-reverse;
 	position: fixed;
-	transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+	transform: translateX(-52%) translateY(-50%) rotate(-90deg);
 	top: 50%;
 	left: 1.4rem;
 	justify-content: center;
 	width: 100%;
-	// }
+
+	@include media-desktop-hd {
+		transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+	}
 }
