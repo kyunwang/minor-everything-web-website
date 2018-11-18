@@ -49,19 +49,24 @@ li {
 	padding: 0;
 }
 
+p,
+button {
+	font-size: var(--font-content);
+}
+
 h2 {
 	font-size: var(--font-title);
 }
 
 p {
 	font-family: var(--font-secondary);
-	font-size: var(--font-content);
 	line-height: 1.6;
 }
 
 button {
+	font-family: var(--font-primary);
 	border: none;
-	border-radius: 1rem;
+	border-radius: 0.6rem;
 	background-color: #4a4a4a;
 	color: #fff;
 	padding: 0.8rem 1rem;

@@ -1,0 +1,22 @@
+.sign-up__container {
+	@include background-image('../assets//intro_blob.svg', 90% 50%, 70vw);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+
+	h2 {
+		margin-top: -30%;
+		margin-bottom: 1.6rem;
+	}
+
+	@include media-desktop {
+		@include background-image('../assets//intro_blob.svg', 65% 50%, 40vw);
+		height: 100vh;
+
+		h2 {
+			margin-top: -20%;
+		}
+	}
+}

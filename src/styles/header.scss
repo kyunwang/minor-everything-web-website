@@ -9,18 +9,14 @@
 		margin-bottom: 1rem;
 	}
 
-	p,
-	button {
+	p {
 		font-family: var(--font-primary);
-		font-size: var(--font-content);
 	}
 
 	button,
 	p {
 		margin-left: 20%;
 		margin-bottom: 1rem;
-	}
-	button {
 	}
 
 	@include media-desktop {
