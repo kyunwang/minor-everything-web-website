@@ -36,8 +36,7 @@
 			transition: transform var(--anim-time-primary) var(--anim-cubic-primary);
 		}
 
-		&:hover,
-		&:focus {
+		&:hover {
 			&::before {
 				transform: translateX(-75%);
 			}
@@ -48,9 +47,18 @@
 		position: absolute;
 		opacity: 0;
 
+		&:focus {
+			& ~ label {
+				/* TEMPORARY OUTLINE */
+				outline: dotted lightseagreen 0.2rem;
+				&::before {
+					transform: translateX(-75%);
+				}
+			}
+		}
+
 		&:checked {
 			& ~ label {
-				// outline: dotted lightseagreen 0.2rem;
 				&::before {
 					transform: translateX(-75%) scale(0.5);
 				}
@@ -59,13 +67,6 @@
 			& ~ .program__description {
 				max-height: 50rem;
 				opacity: 1;
-			}
-		}
-
-		&:focus {
-			& ~ label {
-				/* TEMPORARY OUTLINE */
-				outline: dotted lightseagreen 0.2rem;
 			}
 		}
 
