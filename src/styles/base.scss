@@ -74,6 +74,7 @@ button {
 	color: #fff;
 	padding: 0.8rem 1rem;
 
+	cursor: pointer;
 	// transition: border-radius 0.3s ease-in;
 
 	// &:hover {
@@ -87,7 +88,8 @@ a {
 }
 
 :focus {
-	outline: var(--outline);
+	// outline: var(--outline);
+	outline: 0;
 }
 
 @keyframes blob-anim-initial {

@@ -1,5 +1,5 @@
 .intro__container {
-	@include background-image('../assets//intro_blob.svg', 85%, 30vw);
+	@include background-image('../assets//intro_blob.svg', 85%, 28vw);
 	margin-bottom: 8rem;
 	padding-left: var(--indent-2);
 	padding-right: var(--indent-1);
@@ -18,5 +18,9 @@
 		p {
 			width: 78%;
 		}
+	}
+
+	@include media-desktop-uw {
+		background-size: 40vh;
 	}
 }

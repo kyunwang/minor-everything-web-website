@@ -22,6 +22,8 @@
 		width: max-content;
 		margin-bottom: 1.6rem;
 
+		cursor: pointer;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -49,8 +51,7 @@
 
 		&:focus {
 			& ~ label {
-				/* TEMPORARY OUTLINE */
-				outline: var(--outline);
+				// outline: var(--outline);
 				&::before {
 					transform: translateX(-75%);
 				}

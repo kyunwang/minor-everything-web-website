@@ -12,10 +12,9 @@
 		margin-bottom: 1.6rem;
 	}
 
-	@include media-desktop {
-		@include background-image('../assets//intro_blob.svg', 65% 50%, 40vw);
-
+	@include media-desktop-l {
 		align-items: center;
+		background-size: 70vh;
 
 		h2 {
 			margin-top: -20%;

@@ -16,6 +16,13 @@
 	}
 }
 
+// Wide+ to ultra-wide
+@mixin media-desktop-uw {
+	@media only screen and (min-width: 100rem) {
+		@content;
+	}
+}
+
 @mixin background-image($url, $position, $size: 70vw) {
 	background: {
 		image: url($url);

@@ -26,6 +26,8 @@
 		opacity: 0;
 
 		& ~ label {
+			cursor: pointer;
+
 			span {
 				position: relative;
 				display: inline-block;
@@ -68,7 +70,7 @@
 
 		&:focus {
 			& ~ label {
-				outline: var(--outline);
+				// outline: var(--outline);
 				span {
 					&::before {
 						opacity: 1;
