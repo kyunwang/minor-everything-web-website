@@ -1,4 +1,14 @@
 .menu__container {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 1.4rem;
+	width: 100%;
+
+	transform: translateX(-52%) translateY(-50%) rotate(-90deg);
+
 	a {
 		display: inline-block;
 		width: max-content;
@@ -9,15 +19,6 @@
 		width: max-content;
 		margin: 0 0.8rem;
 	}
-
-	display: flex;
-	flex-direction: row-reverse;
-	position: fixed;
-	transform: translateX(-52%) translateY(-50%) rotate(-90deg);
-	top: 50%;
-	left: 1.4rem;
-	justify-content: center;
-	width: 100%;
 
 	@include media-desktop {
 		transform: translateX(-50%) translateY(-50%) rotate(-90deg);

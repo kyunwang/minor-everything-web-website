@@ -2,9 +2,10 @@
 	@include background-image('../assets//intro_blob.svg', 90% 50%, 70vw);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	height: 100vh;
+	padding: var(--indent-2);
 
 	h2 {
 		margin-top: -30%;
@@ -13,7 +14,8 @@
 
 	@include media-desktop {
 		@include background-image('../assets//intro_blob.svg', 65% 50%, 40vw);
-		height: 100vh;
+
+		align-items: center;
 
 		h2 {
 			margin-top: -20%;

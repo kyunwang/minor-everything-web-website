@@ -1,6 +1,6 @@
 .intro__container {
 	@include background-image('../assets//intro_blob.svg', 85%, 30vw);
-	height: 70vh;
+	margin-bottom: 8rem;
 	padding-left: var(--indent-2);
 	padding-right: var(--indent-1);
 
@@ -10,8 +10,12 @@
 
 	p {
 		padding-left: var(--indent-1);
+	}
 
-		@include media-desktop-l {
+	@include media-desktop-l {
+		height: 50vh;
+
+		p {
 			width: 78%;
 		}
 	}
