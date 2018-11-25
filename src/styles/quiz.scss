@@ -120,6 +120,10 @@
 
 				opacity: 0;
 				pointer-events: none;
+
+				transition-property: max-width, opacity;
+				transition-duration: var(--anim-time-primary);
+				transition-timing-function: var(--anim-cubic-primary);
 			}
 		}
 	}
@@ -193,8 +197,8 @@
 	li:nth-last-child(3):first-child {
 		[type='checkbox']:checked {
 			& ~ label::before {
-				content: 'bla';
-				opacity: 1;
+				content: 'feedback2';
+				// opacity: 1;
 			}
 		}
 		color: pink;
@@ -251,8 +255,8 @@
 	[type='checkbox']:nth-last-child(n + 2):first-child,
 	[type='checkbox']:nth-last-child(n + 2):first-child ~ [type='checkbox'] {
 		& ~ label::before {
-			content: 'bla';
-			opacity: 1;
+			content: 'feedback3';
+			// opacity: 1;
 		}
 		color: blue;
 	}
