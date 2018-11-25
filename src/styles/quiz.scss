@@ -7,6 +7,12 @@
 	margin-bottom: 20rem;
 	padding-left: var(--indent-1);
 
+	& > ul {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
 	p {
 		font-family: var(--font-primary);
 		font-weight: 700;
@@ -92,6 +98,32 @@
 		}
 	}
 
+	li {
+		[type='radio'],
+		[type='checkbox'] {
+			& ~ label::before {
+				@include background-image('../assets/test_feedback.svg', left center, 6rem);
+				content: '';
+				display: flex;
+				align-items: center;
+				position: absolute;
+				bottom: -6.4rem;
+				left: 0;
+				font-family: var(--font-primary);
+				font-weight: 700;
+				height: 6rem;
+				width: 34rem;
+				background-color: var(--yellow);
+				border-radius: 4rem;
+				padding-left: 7.2rem;
+				padding-right: 1.6rem;
+
+				opacity: 0;
+				pointer-events: none;
+			}
+		}
+	}
+
 	[type='checkbox'] {
 		& ~ label {
 			span {
@@ -108,9 +140,16 @@
 		}
 	}
 
+	&:nth-of-type(2) {
+		& > ul {
+			display: grid;
+			grid-gap: 0 2.4rem;
+		}
+	}
+
 	@include media-desktop {
-		& > div {
-			display: flex;
+		& > ul {
+			// display: flex;
 		}
 
 		ul {
@@ -118,5 +157,103 @@
 				margin-left: 2.4rem;
 			}
 		}
+
+		&:nth-of-type(2) {
+			& > ul {
+				grid-template-columns: max-content max-content;
+			}
+		}
+	}
+}
+
+// TODO: Find a CSS only solution to prevent duplicate psuodo elements. :first-of-type doe snot work
+.quiz__question-1 {
+	li:nth-of-type(1) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Great we love people like you!';
+			opacity: 1;
+		}
+	}
+	li:nth-of-type(2) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Hmmm, I am not sure you will like it here then';
+			opacity: 1;
+		}
+	}
+	li:nth-of-type(3) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Are you sure? Sharing is caring!';
+			opacity: 1;
+		}
+	}
+}
+
+.quiz__question-2 {
+	// x and more
+	li:nth-last-child(3):first-child {
+		[type='checkbox']:checked {
+			& ~ label::before {
+				content: 'bla';
+				opacity: 1;
+			}
+		}
+		color: pink;
+	}
+
+	// li:nth-last-child(n + 3):first-child,
+	// li:nth-last-child(n + 3):first-child ~ li {
+	// 	[type='checkbox']:checked {
+	// 		& ~ label::before {
+	// 			content: 'bla';
+	// 			opacity: 1;
+	// 		}
+	// 	}
+	// 	color: blue;
+	// }
+
+	// li:nth-last-child(n + 6):first-child,
+	// li:nth-last-child(n + 6):first-child ~ li {
+	// 	[type='checkbox']:checked {
+	// 		& ~ label::before {
+	// 			content: 'blabla';
+	// 			opacity: 1;
+	// 		}
+	// 	}
+	// 	color: green;
+	// }
+
+	// li:nth-last-child(n + 8):first-child,
+	// li:nth-last-child(n + 8):first-child ~ li {
+	// 	[type='checkbox']:checked {
+	// 		& ~ label::before {
+	// 			content: 'blablabla';
+	// 			opacity: 1;
+	// 		}
+	// 	}
+	// 	color: red;
+	// }
+}
+
+.quiz__question-3 {
+	// [type='checkbox'] {
+	// 	& ~ label::before {
+	// 		content: 'feedback 3';
+	// 	}
+	// }
+
+	// li:nth-of-type(3) [type='checkbox']:checked {
+	// 	& ~ label::before {
+	// 		content: 'Are you sure? Sharing is caring!';
+	// 		opacity: 1;
+	// 	}
+	// }
+
+	[type='checkbox']:nth-last-child(n + 2):first-child,
+	[type='checkbox']:nth-last-child(n + 2):first-child ~ [type='checkbox'] {
+		& ~ label::before {
+			content: 'bla';
+			opacity: 1;
+		}
+		color: blue;
 	}
 }
