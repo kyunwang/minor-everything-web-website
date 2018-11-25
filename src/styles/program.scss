@@ -74,7 +74,7 @@
 		@include media-desktop {
 			&:checked {
 				& ~ .program__description {
-					max-height: 30rem;
+					max-height: 35rem;
 					opacity: 1;
 				}
 			}
@@ -145,7 +145,7 @@
 		li {
 			margin-bottom: 1.6rem;
 			&:nth-of-type(1n + 2) {
-				margin: 0;
+				margin-left: 0;
 			}
 		}
 	}
