@@ -10,16 +10,18 @@
 		padding-left: var(--indent-3);
 	}
 
-	& > p {
-		margin-bottom: 2.4rem;
-	}
-
 	ul {
 		display: flex;
 		flex-direction: column;
 		& > li {
-			// default the order
-			order: 1;
+			// default the order to be below all section headers
+			order: 9;
+		}
+
+		& > [data-program-sections] {
+			p {
+				margin-bottom: 2.4rem;
+			}
 		}
 	}
 
@@ -83,7 +85,7 @@
 		@include media-desktop {
 			&:checked {
 				& ~ .program__description {
-					max-height: 35rem;
+					max-height: 40rem;
 					opacity: 1;
 				}
 			}
@@ -159,5 +161,20 @@
 				margin-left: 0;
 			}
 		}
+	}
+}
+
+[data-program-sections] {
+	display: none;
+
+	&:nth-of-type(1) {
+		display: block;
+		order: 1;
+	}
+	&:nth-of-type(2) {
+		order: 3;
+	}
+	&:nth-of-type(3) {
+		order: 5;
 	}
 }
