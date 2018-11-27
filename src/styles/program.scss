@@ -23,6 +23,16 @@
 				margin-bottom: 2.4rem;
 			}
 		}
+
+		[data-program-sections='love'] {
+			order: 2;
+		}
+		[data-program-sections='interest'] {
+			order: 4;
+		}
+		[data-program-sections='neutral'] {
+			order: 6;
+		}
 	}
 
 	label {
@@ -165,7 +175,7 @@
 }
 
 [data-program-sections] {
-	display: none;
+	// display: none;
 
 	&:nth-of-type(1) {
 		display: block;

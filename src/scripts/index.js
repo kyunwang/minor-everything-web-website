@@ -14,30 +14,35 @@ function $(selector) {
 }
 
 function $$(selector) {
-	return document.querySelectorAll(selector);
+	return Array.from(document.querySelectorAll(selector));
 }
 
 function addEvents(elementArr, event, cb) {
 	elementArr.forEach(element => element.addEventListener(event, cb));
 }
 
-function init() {
-	let answers = [];
+(function() {
+	const watchers = {
+		shouldUpdate: false,
+	};
 
 	const nodes = {
 		originalProgram: document.getElementById('p-program'),
-		allCourses: $$(`[data-course]`),
+		allPrograms: $$(`[data-program]`),
 		allSubjects: $$(`[data-subject]`),
+		programSections: $$(`[data-program-sections]`),
 		question1: $$(`[name="question-1"]`),
 		question2: $$(`[name="question-2"]`),
 		question3: $$(`[name="question-3"]`),
+		test: $$('.program__description'),
 	};
 
 	const app = {
 		observer: null,
 		init() {
 			// console.log(nodes.originalProgram);
-			console.log(nodes.allSubjects);
+			// console.log(nodes.allSubjects);
+
 			this.initEvents();
 		},
 		initEvents() {
@@ -50,9 +55,13 @@ function init() {
 				// rootMargin: '10% 0px 0px 0px',
 			};
 
-			function cb(entries, observer) {
-				console.dir(entries[0].isIntersecting);
-			}
+			const cb = (entries, observer) => {
+				// console.dir(entries[0].isIntersecting);
+				// console.log(this);
+				if (watchers.shouldUpdate) {
+					this.sortProgram();
+				}
+			};
 
 			this.observer = new IntersectionObserver(cb, options);
 			this.observer.observe(nodes.originalProgram);
@@ -67,11 +76,38 @@ function init() {
 				subjects.forEach(function(subject) {
 					subject.classList.toggle('selected');
 				});
+
+				watchers.shouldUpdate = true;
+			});
+		},
+		sortProgram() {
+			const items = nodes.allPrograms.map(node => node.querySelectorAll('li'));
+			// console.log(items);
+			console.log(nodes.programSections);
+
+			// TODO: Check performance
+			items.forEach((item, index) => {
+				this.getSelectedPrograms(item, index);
+			});
+		},
+		getSelectedPrograms(item, index) {
+			item.forEach(subject => {
+				if (subject.classList.contains('selected')) {
+					// subject.dataset.programSections = 'interest';
+					console.log('subject', subject.dataset);
+
+					// this.assignSection();
+					nodes.allPrograms[index].dataset.programSections = 'interest';
+				}
+			});
+		},
+		assignSection(program) {
+			nodes.allPrograms.forEach(program => {
+				console.log('program', program.dataset);
+				// }
 			});
 		},
 	};
 
 	app.init();
-}
-
-init();
+})();
