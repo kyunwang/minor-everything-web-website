@@ -192,9 +192,16 @@
 	}
 
 	aside {
+		position: relative;
+		display: none;
 		overflow: hidden;
+		margin: 2.4rem 0;
 		border-radius: 0.8rem;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+		div {
+			// position: absolute;
+		}
 
 		p {
 			margin: 0;
@@ -212,6 +219,22 @@
 				background-color: var(--yellow);
 				font-weight: 700;
 			}
+		}
+
+		style {
+			white-space: pre-line;
+			display: block;
+			outline: none;
+			font-size: 1.4em;
+			height: 30em;
+		}
+	}
+
+	// @include media-desktop {
+	// In case of large phablets. Landscape ipad pro's not included yet
+	@media only screen and (min-width: 50rem) and (orientation: landscape) {
+		aside {
+			display: block;
 		}
 	}
 }
