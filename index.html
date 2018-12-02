@@ -36,18 +36,7 @@
 			<h2>Tell us about you!</h2>
 
 			<section class="quiz__question-container quiz__question-1">
-				<aside class="quiz__editor-container">
-					<!--
-						<div>
-							<ul class="quiz__menu">
-								<li>Reset</li>
-								<li>Style for me</li>
-								<li>Close</li>
-							</ul>
-
-							<textarea name="" id="" cols="30" rows="10"> </textarea>
-						</div>
-					-->
+				<aside>
 					<div>
 						<p>
 							Well, this doesn't look good. Want to test your CSS skills to make this question
@@ -56,7 +45,13 @@
 						<button>I pass</button><button>Let's do this!</button>
 					</div>
 
-					<div>
+					<div class="quiz__editor-container">
+						<ul class="quiz__menu">
+							<li>Reset</li>
+							<li>Style for me</li>
+							<li>Close</li>
+						</ul>
+
 						<style contenteditable="true" spellcheck="false">
 							.quiz__editor-container {
 								color: blue;

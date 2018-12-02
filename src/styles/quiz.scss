@@ -220,14 +220,6 @@
 				font-weight: 700;
 			}
 		}
-
-		style {
-			white-space: pre-line;
-			display: block;
-			outline: none;
-			font-size: 1.4em;
-			height: 30em;
-		}
 	}
 
 	// @include media-desktop {
@@ -306,5 +298,16 @@
 			// opacity: 1;
 		}
 		color: blue;
+	}
+}
+
+.quiz__editor-container {
+	style {
+		white-space: pre-line;
+		display: block;
+		outline: none;
+		font-size: 1.4em;
+		height: 30em;
+		overflow-y: scroll;
 	}
 }
