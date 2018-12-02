@@ -18,19 +18,19 @@
 			order: 9;
 		}
 
-		& > [data-program-sections] {
+		& > [data-programs] {
 			p {
 				margin-bottom: 2.4rem;
 			}
 		}
 
-		[data-program-sections='love'] {
+		[data-programs='love'] {
 			order: 2;
 		}
-		[data-program-sections='interest'] {
+		[data-programs='interest'] {
 			order: 4;
 		}
-		[data-program-sections='neutral'] {
+		[data-programs='neutral'] {
 			order: 6;
 		}
 	}
