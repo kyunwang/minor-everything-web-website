@@ -18,7 +18,7 @@
 			order: 9;
 		}
 
-		& > [data-programs] {
+		& > [data-program-sections] {
 			p {
 				margin-bottom: 2.4rem;
 			}
@@ -175,7 +175,7 @@
 }
 
 [data-program-sections] {
-	// display: none;
+	display: none;
 
 	&:nth-of-type(1) {
 		display: block;
@@ -186,5 +186,9 @@
 	}
 	&:nth-of-type(3) {
 		order: 5;
+	}
+
+	&.show {
+		display: block;
 	}
 }

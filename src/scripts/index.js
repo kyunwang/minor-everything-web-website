@@ -1,14 +1,5 @@
 import '../styles/index.scss';
 
-const courses = {
-	cctr: [],
-	wafs: [],
-	bt: [],
-	pm: [],
-	rtw: [],
-	wd: [],
-};
-
 function $(selector) {
 	return document.querySelector(selector);
 }
@@ -23,7 +14,7 @@ function addEvents(elementArr, event, cb) {
 
 (function() {
 	const CONSTANTS = {
-		programSections: ['love', 'interest', 'neutral'],
+		programSectionLabels: ['love', 'interest', 'neutral'],
 	};
 
 	const watchers = {
@@ -34,7 +25,7 @@ function addEvents(elementArr, event, cb) {
 		originalProgram: document.getElementById('p-program'),
 		allPrograms: $$(`[data-program]`),
 		allSubjects: $$(`[data-subject]`),
-		programs: $$(`[data-program-sections]`),
+		programSections: $$(`[data-program-sections]`),
 		question1: $$(`[name="question-1"]`),
 		question2: $$(`[name="question-2"]`),
 		question3: $$(`[name="question-3"]`),
@@ -60,10 +51,6 @@ function addEvents(elementArr, event, cb) {
 			this.observer.observe(nodes.originalProgram);
 		},
 		initQuestions() {
-			// addEvents(nodes.question1, 'change', function(e) {
-			// 	console.log(e.target.value);
-			// 	$$([`data-subject=${e.target.value}`]);
-			// });
 			addEvents(nodes.question2, 'change', function(e) {
 				const subjects = $$(`[data-subject="${e.target.value}"]`);
 				subjects.forEach(function(subject) {
@@ -87,7 +74,6 @@ function addEvents(elementArr, event, cb) {
 				const len = items[index].length;
 				switch (len % num) {
 					case 0:
-						// all 3 selected
 						return 0; // love
 					case 1:
 						return 1; // interest
@@ -100,24 +86,34 @@ function addEvents(elementArr, event, cb) {
 
 			return assignedSections;
 		},
+		checkSections(assignedSections) {
+			// Simple reset
+			nodes.programSections.forEach(section => {
+				section.classList.remove('show');
+			});
+
+			if (assignedSections.includes(0)) {
+				nodes.programSections[0].classList.add('show');
+			}
+			if (assignedSections.includes(1)) {
+				nodes.programSections[1].classList.add('show');
+			}
+			if (assignedSections.includes(2)) {
+				nodes.programSections[2].classList.add('show');
+			}
+		},
 		sortProgram() {
 			const items = nodes.allPrograms.map(node => node.querySelectorAll('li'));
-			const selectedAmounts = items.map(item => {
-				const arrItem = Array.from(item);
-
-				return arrItem.reduce((accumulator, currentValue) => {
-					if (currentValue.classList.contains('selected')) return accumulator + 1;
-					return accumulator;
-				}, 0);
-			});
 			const assignedSections = this.getAssignedSections(items);
+
+			this.checkSections(assignedSections);
 
 			// TODO: Check performance
 			items.forEach((item, index) => {
 				item.forEach(subject => {
 					if (subject.classList.contains('selected')) {
 						nodes.allPrograms[index].dataset.programs =
-							CONSTANTS.programSections[assignedSections[index]];
+							CONSTANTS.programSectionLabels[assignedSections[index]];
 					}
 				});
 			});
