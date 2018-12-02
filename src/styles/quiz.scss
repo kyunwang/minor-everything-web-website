@@ -190,6 +190,30 @@
 			opacity: 1;
 		}
 	}
+
+	aside {
+		overflow: hidden;
+		border-radius: 0.8rem;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+		p {
+			margin: 0;
+			padding: 1.6rem;
+		}
+
+		button {
+			// all: unset;
+			display: inline-block;
+			color: initial;
+			background-color: initial;
+			border-radius: 0;
+			width: 50%;
+			&:last-of-type {
+				background-color: var(--yellow);
+				font-weight: 700;
+			}
+		}
+	}
 }
 
 .quiz__question-2 {
