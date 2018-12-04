@@ -1,5 +1,9 @@
 .quiz__container {
 	padding: 0 var(--indent-1);
+
+	h2 {
+		margin-bottom: 1.6rem;
+	}
 }
 
 .quiz__question-container {
@@ -201,6 +205,19 @@
 
 		div {
 			// position: absolute;
+			&:first-of-type {
+				display: none;
+				button {
+					// all: unset;
+					display: inline-block;
+					border-radius: 0;
+					width: 50%;
+					&:last-of-type {
+						background-color: var(--yellow);
+						font-weight: 700;
+					}
+				}
+			}
 		}
 
 		p {
@@ -209,16 +226,8 @@
 		}
 
 		button {
-			// all: unset;
-			display: inline-block;
 			color: initial;
 			background-color: initial;
-			border-radius: 0;
-			width: 50%;
-			&:last-of-type {
-				background-color: var(--yellow);
-				font-weight: 700;
-			}
 		}
 	}
 
@@ -227,6 +236,20 @@
 	@media only screen and (min-width: 50rem) and (orientation: landscape) {
 		aside {
 			display: block;
+		}
+	}
+
+	@media only screen and (min-width: 70rem) and (orientation: landscape) {
+		display: flex;
+		flex-flow: row-reverse nowrap;
+
+		div {
+			flex: 1;
+		}
+
+		aside {
+			flex: 1;
+			margin: 0 0 0 1.6rem;
 		}
 	}
 }
@@ -302,12 +325,65 @@
 }
 
 .quiz__editor-container {
+	background-color: var(--grey-dark);
+
+	ul {
+		display: grid;
+		grid-template-columns: minmax(1rem, 3rem) auto auto auto;
+		grid-gap: 0.2rem;
+		li {
+			width: 100%;
+			position: relative;
+			font-family: var(--font-primary);
+			font-weight: 700;
+			background-color: var(--yellow);
+			text-align: center;
+			text-transform: uppercase;
+			margin: 0;
+			padding: 0.4rem;
+			z-index: 1;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 50%;
+				width: 100%;
+				background-color: var(--grey-dark);
+				z-index: -1;
+				transition-property: transform;
+				transition-timing-function: var(--anim-cubic-primary);
+				transition-duration: var(--anim-time-primary);
+			}
+
+			&:hover {
+				&:nth-of-type(1n + 2)::before {
+					transform: translateY(100%);
+				}
+			}
+		}
+
+		button {
+			padding: 0;
+			font-weight: 700;
+		}
+	}
+
 	style {
+		font-family: var(--font-secondary);
 		white-space: pre-line;
-		display: block;
 		outline: none;
-		font-size: 1.4em;
-		height: 30em;
+		display: block;
+		font-size: 1.2rem;
+		color: #fafafa;
+		height: 24rem;
 		overflow-y: scroll;
+		padding-left: 1.6rem;
+
+		&::-webkit-scrollbar {
+			width: 0.3rem;
+		}
 	}
 }
