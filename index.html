@@ -5,6 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Minor Everything Web</title>
 	</head>
+	<style id="editor-style">
+		/* This is the container of the question */
+		.quiz__to-style {
+		}
+	</style>
 
 	<body>
 		<ul class="menu__container">
@@ -35,7 +40,7 @@
 		<section id="p-quiz" class="quiz__container">
 			<h2>Tell us about you!</h2>
 
-			<section class="quiz__question-container quiz__question-1">
+			<section class="quiz__question-1">
 				<aside>
 					<div>
 						<p>
@@ -45,7 +50,7 @@
 						<button>I pass</button><button>Let's do this!</button>
 					</div>
 
-					<div class="quiz__editor-container">
+					<div class="quiz__editor-container closed">
 						<ul class="quiz__menu">
 							<li></li>
 							<li><button>Reset</button></li>
@@ -53,11 +58,7 @@
 							<li><button>Close &#10005;</button></li>
 						</ul>
 
-						<style contenteditable="true" spellcheck="false">
-							.quiz__to-style {
-								color: blue;
-							}
-						</style>
+						<code id="code-editor" contenteditable="true" spellcheck="false"> </code>
 					</div>
 				</aside>
 

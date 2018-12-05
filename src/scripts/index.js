@@ -12,6 +12,10 @@ function addEvents(elementArr, event, cb) {
 	elementArr.forEach(element => element.addEventListener(event, cb));
 }
 
+function removeHTMLTags(element) {
+	return element.innerHTML.replace(/\<.*?\>/g, '');
+}
+
 (function() {
 	const CONSTANTS = {
 		programSectionLabels: ['love', 'interest', 'neutral'],
@@ -19,6 +23,7 @@ function addEvents(elementArr, event, cb) {
 
 	const watchers = {
 		shouldUpdate: false,
+		debounceTimeout: null,
 	};
 
 	const nodes = {
@@ -29,6 +34,8 @@ function addEvents(elementArr, event, cb) {
 		question1: $$(`[name="question-1"]`),
 		question2: $$(`[name="question-2"]`),
 		question3: $$(`[name="question-3"]`),
+		codeEditor: $('#code-editor'),
+		editorStyle: $('#editor-style'),
 	};
 
 	const app = {
@@ -39,6 +46,7 @@ function addEvents(elementArr, event, cb) {
 		initEvents() {
 			this.initQuestions();
 			this.initIntersection();
+			this.initCSSEditor();
 		},
 		initIntersection() {
 			const cb = (entries, observer) => {
@@ -58,6 +66,19 @@ function addEvents(elementArr, event, cb) {
 				});
 
 				watchers.shouldUpdate = true;
+			});
+		},
+		initCSSEditor() {
+			const { codeEditor, editorStyle } = nodes;
+
+			codeEditor.innerHTML += editorStyle.innerHTML;
+
+			codeEditor.addEventListener('keyup', () => {
+				clearTimeout(watchers.debounceTimeout);
+				watchers.debounceTimeout = setTimeout(() => {
+					editorStyle.innerHTML = '';
+					editorStyle.innerHTML += removeHTMLTags(codeEditor);
+				}, 700);
 			});
 		},
 		getAssignedSections(items) {
