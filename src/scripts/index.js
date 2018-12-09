@@ -132,6 +132,11 @@ function removeHTMLTags(element) {
 	return element.innerHTML.replace(/\<.*?\>/g, '');
 }
 
+function addObserver(element, cb, options = {}) {
+	const observer = new IntersectionObserver(cb, options);
+	observer.observe(element);
+}
+
 (function() {
 	const CONSTANTS = {
 		programSectionLabels: ['love', 'interest', 'neutral'],
@@ -144,6 +149,8 @@ function removeHTMLTags(element) {
 	};
 
 	const nodes = {
+		mainSections: $$('body > div > section'),
+		menuItems: $$('.menu__container a'),
 		originalProgram: document.getElementById('p-program'),
 		allPrograms: $$(`[data-program]`),
 		allSubjects: $$(`[data-subject]`),
@@ -160,26 +167,57 @@ function removeHTMLTags(element) {
 	};
 
 	const app = {
-		observer: null,
+		// observer: null,
 		init() {
 			this.initEvents();
 		},
 		initEvents() {
-			this.initQuestions();
+			this.initMenu();
 			this.initIntersection();
+			this.initQuizMenu();
+			this.initQuestions();
 			this.initQuizModal();
 			this.initCSSEditor();
 			this.initQuizMenu();
 		},
+		initMenu() {
+			const { mainSections } = nodes;
+			const options = {
+				rootMargin: '-10% 0px ',
+			};
+
+			const removeActive = index => {
+				nodes.menuItems[index - 1].classList.remove('active');
+			};
+
+			const cb = (entries, obs) => {
+				if (entries[0].isIntersecting) {
+					mainSections.forEach((element, index) => {
+						if (index === 0) return;
+						const target = entries[0].target;
+						if (element === target) {
+							console.log(entries[0].target, obs);
+							nodes.menuItems[index - 1].classList.add('active');
+						} else {
+							removeActive(index);
+						}
+					});
+				}
+			};
+
+			mainSections.forEach((element, index) => {
+				if (index === 0) return;
+				addObserver(element, cb, options);
+			});
+		},
 		initIntersection() {
-			const cb = (entries, observer) => {
+			const cb = () => {
 				if (watchers.shouldUpdate) {
 					this.sortProgram();
 				}
 			};
 
-			this.observer = new IntersectionObserver(cb);
-			this.observer.observe(nodes.originalProgram);
+			addObserver(nodes.originalProgram, cb);
 		},
 		initQuestions() {
 			addEvents(nodes.question2, 'change', function(e) {

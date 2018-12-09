@@ -10,9 +10,49 @@
 	transform: translateX(-52%) translateY(-50%) rotate(-90deg);
 
 	a {
+		position: relative;
 		display: inline-block;
 		width: max-content;
 		text-decoration: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 0.5rem;
+			width: 0.5rem;
+			// background: var(--yellow);
+			background: var(--grey-dark);
+			border-radius: 50%;
+			margin: auto;
+
+			opacity: 0;
+			transform: translateY(0);
+			transition-property: opacity, transform;
+			transition-timing-function: var(--anim-cubic-primary);
+			transition-duration: var(--anim-time-primary);
+
+			/* antialiasing */
+			// will-change: transform;
+		}
+
+		&:hover,
+		&:focus {
+			&::after {
+				opacity: 1;
+				transform: translateY(0.8rem);
+			}
+		}
+
+		&.active {
+			&::after {
+				background: var(--yellow);
+				opacity: 1;
+				transform: translateY(0.8rem);
+			}
+		}
 	}
 
 	li {
