@@ -34,6 +34,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+body > div {
+	// Until overflowing element is found on small screens
+	overflow-x: hidden;
+}
+
 body,
 h1,
 h2,
@@ -67,6 +72,7 @@ p {
 }
 
 button {
+	position: relative;
 	font-family: var(--font-primary);
 	border: none;
 	border-radius: 0.6rem;
@@ -81,6 +87,17 @@ button {
 	// animation: blob-anim-initial 3s infinite;
 	// border-radius: 25% 75% 23% 77% / 67% 43% 57% 33%;
 	// }
+
+	box-shadow: -5px 8px #888888;
+
+	transition-property: box-shadow;
+	transition-timing-function: var(--anim-cubic-primary);
+	transition-duration: var(--anim-time-primary);
+
+	&:hover,
+	&:focus {
+		box-shadow: 0px 0px #888888;
+	}
 }
 
 a {
