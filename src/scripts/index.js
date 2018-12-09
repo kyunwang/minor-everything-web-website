@@ -2,6 +2,7 @@ import '../styles/index.scss';
 
 const initialCSS = `
 /* This is the container of the question. There are a few CSS custom properties but you can just use  whatever you want */
+
 .quiz__to-style {
 }
 
@@ -12,6 +13,7 @@ const initialCSS = `
 
 const completeCSS = `
 /* This is how it is styled */
+
 .quiz__to-style {
 	/* padding-left: var(--indent-1); */
 }
@@ -138,6 +140,7 @@ function removeHTMLTags(element) {
 	const watchers = {
 		shouldUpdate: false,
 		debounceTimeout: null,
+		currentCharacter: 0,
 	};
 
 	const nodes = {
@@ -197,16 +200,35 @@ function removeHTMLTags(element) {
 				}, 700);
 			});
 		},
+		typewriterAnimation() {
+			setTimeout(() => {
+				nodes.editorStyle.innerHTML += completeCSS[watchers.currentCharacter];
+				nodes.codeEditor.innerHTML += completeCSS[watchers.currentCharacter];
+				watchers.currentCharacter++;
+				nodes.codeEditor.scrollTop = nodes.codeEditor.scrollHeight;
+				if (watchers.currentCharacter < completeCSS.length) {
+					//  if (completeCSS[watchers.currentCharacter] === "}") {
+					// 	hljs.highlightBlock(nodes.codeEditor);
+					//  }
+					console.log(watchers.currentCharacter);
+					this.typewriterAnimation();
+				}
+			}, 10);
+		},
 		initQuizMenu() {
 			const { codeEditor, editorStyle } = nodes;
 
 			nodes.quizMenu[0].addEventListener('click', () => {
+				watchers.currentCharacter = 0;
 				codeEditor.innerHTML = initialCSS;
 				editorStyle.innerHTML = initialCSS;
 			});
 			nodes.quizMenu[1].addEventListener('click', () => {
-				codeEditor.innerHTML = completeCSS;
-				editorStyle.innerHTML = completeCSS;
+				// codeEditor.innerHTML = completeCSS;
+				// editorStyle.innerHTML = completeCSS;
+				watchers.currentCharacter = 0;
+				codeEditor.innerHTML = '';
+				this.typewriterAnimation();
 			});
 		},
 		getAssignedSections(items) {
