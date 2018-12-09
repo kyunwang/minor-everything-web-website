@@ -153,10 +153,6 @@
 	}
 
 	@include media-desktop {
-		& > ul {
-			// display: flex;
-		}
-
 		ul {
 			&:nth-of-type(2) {
 				margin-left: 2.4rem;
@@ -174,29 +170,6 @@
 // TODO: Find a CSS only solution to prevent duplicate psuodo elements. :first-of-type doe snot work
 .quiz__question-1 {
 	margin-bottom: 20rem;
-
-	.quiz__to-style {
-		position: relative;
-
-		li:nth-of-type(1) [type='radio']:checked {
-			& ~ label::before {
-				content: 'Great we love people like you!';
-				opacity: 1;
-			}
-		}
-		li:nth-of-type(2) [type='radio']:checked {
-			& ~ label::before {
-				content: 'Hmmm, I am not sure you will like it here then';
-				opacity: 1;
-			}
-		}
-		li:nth-of-type(3) [type='radio']:checked {
-			& ~ label::before {
-				content: 'Are you sure? Sharing is caring!';
-				opacity: 1;
-			}
-		}
-	}
 
 	aside {
 		position: relative;
@@ -282,15 +255,22 @@
 		justify-content: space-between;
 
 		& > div {
-			// flex: 1;
 			width: 50%;
 		}
 
 		aside {
 			width: 50%;
-			// flex: 1;
 			margin: 0 0 0 1.6rem;
 		}
+	}
+}
+
+.no-js .quiz__question-1 {
+	& > div {
+		width: 100%;
+	}
+	aside {
+		display: none;
 	}
 }
 
@@ -460,6 +440,267 @@
 		}
 	}
 }
+
+.quiz__to-style {
+	position: relative;
+
+	li:nth-of-type(1) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Great we love people like you!';
+			opacity: 1;
+		}
+	}
+	li:nth-of-type(2) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Hmmm, I am not sure you will like it here then';
+			opacity: 1;
+		}
+	}
+	li:nth-of-type(3) [type='radio']:checked {
+		& ~ label::before {
+			content: 'Are you sure? Sharing is caring!';
+			opacity: 1;
+		}
+	}
+
+	@media only screen and (max-width: 60rem) {
+		padding-left: var(--indent-1);
+
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
+
+		p {
+			font-family: var(--font-primary);
+			font-weight: 700;
+			font-size: calc(1rem + 1vw);
+			line-height: 1.4;
+			margin-bottom: 1.6rem;
+		}
+
+		li {
+			font-family: var(--font-secondary);
+			font-size: var(--font-content);
+			margin-bottom: 1.6rem;
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+
+			&:focus {
+				& ~ label {
+					span {
+						&::before {
+							opacity: 1;
+							transform: scale(0.5) translateX(-24%);
+						}
+					}
+				}
+			}
+
+			&:checked {
+				& ~ label {
+					span {
+						&::before {
+							opacity: 1;
+							transform: scale(1) translateX(-24%);
+						}
+					}
+				}
+			}
+
+			& ~ label {
+				cursor: pointer;
+
+				&:hover {
+					span {
+						&::before {
+							opacity: 1;
+							transform: scale(1) translateX(-24%);
+						}
+					}
+				}
+
+				&::before {
+					content: '';
+					display: flex;
+					align-items: center;
+					position: absolute;
+					bottom: -8rem;
+					left: 0;
+					font-family: var(--font-primary);
+					font-weight: 700;
+					height: 6rem;
+					width: 34rem;
+					background-image: url('../assets/test_feedback.svg');
+					background-position: left center;
+					background-size: 6rem;
+					background-repeat: no-repeat;
+					background-color: var(--yellow);
+					border-radius: 4rem;
+					padding-left: 7.2rem;
+					padding-right: 1.6rem;
+					opacity: 0;
+					pointer-events: none;
+					transition-property: max-width, opacity;
+					transition-duration: var(--anim-time-primary);
+					transition-timing-function: var(--anim-cubic-primary);
+				}
+
+				span {
+					position: relative;
+					display: inline-block;
+					background: var(--yellow);
+					margin-right: -0.6rem;
+					border-radius: 50%;
+					padding: 1rem;
+					vertical-align: middle;
+					z-index: -1;
+
+					&::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 16.7%;
+						height: calc(100% * (2 / 3));
+						width: calc(100% * (2 / 3));
+						border-radius: inherit;
+						background: var(--grey-dark);
+						opacity: 0;
+						transform: scale(0) translateX(0);
+						transition-property: opacity, width, height, transform;
+						transition-duration: var(--anim-time-primary);
+						transition-timing-function: var(--anim-cubic-primary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.no-js .quiz__to-style {
+	padding-left: var(--indent-1);
+
+	& > ul {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	p {
+		font-family: var(--font-primary);
+		font-weight: 700;
+		font-size: calc(1rem + 1vw);
+		line-height: 1.4;
+		margin-bottom: 1.6rem;
+	}
+
+	li {
+		font-family: var(--font-secondary);
+		font-size: var(--font-content);
+		margin-bottom: 1.6rem;
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+
+		&:focus {
+			& ~ label {
+				span {
+					&::before {
+						opacity: 1;
+						transform: scale(0.5) translateX(-24%);
+					}
+				}
+			}
+		}
+
+		&:checked {
+			& ~ label {
+				span {
+					&::before {
+						opacity: 1;
+						transform: scale(1) translateX(-24%);
+					}
+				}
+			}
+		}
+
+		& ~ label {
+			cursor: pointer;
+
+			&:hover {
+				span {
+					&::before {
+						opacity: 1;
+						transform: scale(1) translateX(-24%);
+					}
+				}
+			}
+
+			&::before {
+				content: '';
+				display: flex;
+				align-items: center;
+				position: absolute;
+				bottom: -8rem;
+				left: 0;
+				font-family: var(--font-primary);
+				font-weight: 700;
+				height: 6rem;
+				width: 34rem;
+				background-image: url('../assets/test_feedback.svg');
+				background-position: left center;
+				background-size: 6rem;
+				background-repeat: no-repeat;
+				background-color: var(--yellow);
+				border-radius: 4rem;
+				padding-left: 7.2rem;
+				padding-right: 1.6rem;
+				opacity: 0;
+				pointer-events: none;
+				transition-property: max-width, opacity;
+				transition-duration: var(--anim-time-primary);
+				transition-timing-function: var(--anim-cubic-primary);
+			}
+
+			span {
+				position: relative;
+				display: inline-block;
+				background: var(--yellow);
+				margin-right: -0.6rem;
+				border-radius: 50%;
+				padding: 1rem;
+				vertical-align: middle;
+				z-index: -1;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 16.7%;
+					height: calc(100% * (2 / 3));
+					width: calc(100% * (2 / 3));
+					border-radius: inherit;
+					background: var(--grey-dark);
+					opacity: 0;
+					transform: scale(0) translateX(0);
+					transition-property: opacity, width, height, transform;
+					transition-duration: var(--anim-time-primary);
+					transition-timing-function: var(--anim-cubic-primary);
+				}
+			}
+		}
+	}
+}
+
+/*==========================
+=== General
+===========================*/
 
 .hide--vertical {
 	pointer-events: none;

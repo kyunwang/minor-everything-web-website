@@ -18,12 +18,6 @@ const completeCSS = `
 		/* padding-left: var(--indent-1); */
 	}
 
-	.quiz__to-style li {
-		font-family: var(--font-secondary);
-		font-size: var(--font-content);
-		margin-bottom: 1.6rem;
-	}
-
 	.quiz__to-style > ul {
 		display: flex;
 		flex-direction: column;
@@ -35,6 +29,12 @@ const completeCSS = `
 		font-weight: 700;
 		font-size: calc(1rem + 1vw);
 		line-height: 1.4;
+		margin-bottom: 1.6rem;
+	}
+	
+	.quiz__to-style li {
+		font-family: var(--font-secondary);
+		font-size: var(--font-content);
 		margin-bottom: 1.6rem;
 	}
 
@@ -74,7 +74,7 @@ const completeCSS = `
 		transition-timing-function: var(--anim-cubic-primary);
 	}
 
-	.quiz__to-style input ~ label:hover span::before {
+	.quiz__to-style input:focus ~ label span::before {
 		opacity: 1;
 		transform: scale(0.5) translateX(-24%);
 	}
@@ -84,12 +84,12 @@ const completeCSS = `
 		transform: scale(1) translateX(-24%);
 	}
 
-	.quiz__to-style input:focus ~ label span::before {
+	.quiz__to-style input ~ label:hover span::before {
 		opacity: 1;
 		transform: scale(0.5) translateX(-24%);
 	}
 
-	.quiz__to-style [type='radio'] ~ label::before {
+	.quiz__to-style input ~ label::before {
 		content: '';
 		display: flex;
 		align-items: center;
@@ -170,6 +170,9 @@ function addObserver(element, cb, options = {}) {
 		// observer: null,
 		init() {
 			this.initEvents();
+
+			// Only necessaty for the editor
+			document.body.classList.remove('no-js');
 		},
 		initEvents() {
 			this.initMenu();
@@ -196,7 +199,6 @@ function addObserver(element, cb, options = {}) {
 						if (index === 0) return;
 						const target = entries[0].target;
 						if (element === target) {
-							console.log(entries[0].target, obs);
 							nodes.menuItems[index - 1].classList.add('active');
 						} else {
 							removeActive(index);
@@ -300,7 +302,6 @@ function addObserver(element, cb, options = {}) {
 				watchers.currentCharacter++;
 				codeEditor.scrollTop = codeEditor.scrollHeight;
 				if (watchers.currentCharacter < completeCSS.length) {
-					console.log(watchers.currentCharacter);
 					this.typewriterAnimation();
 				}
 			}, 10);
