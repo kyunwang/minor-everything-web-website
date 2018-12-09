@@ -7,7 +7,6 @@
 }
 
 .quiz__question-container {
-	// margin-bottom: 2.4rem;
 	margin-bottom: 20rem;
 	padding-left: var(--indent-1);
 
@@ -43,7 +42,6 @@
 				display: inline-block;
 				background: var(--yellow);
 				margin-right: -0.6rem;
-				// border-radius: 25%;
 				padding: 1rem;
 				vertical-align: middle;
 				z-index: -1;
@@ -51,7 +49,6 @@
 				&::before {
 					content: '';
 					position: absolute;
-					// left: -16.7%;
 					left: 0;
 					top: 16.7%;
 					height: calc(100% * (2 / 3));
@@ -111,7 +108,7 @@
 				display: flex;
 				align-items: center;
 				position: absolute;
-				bottom: -6.4rem;
+				bottom: -8rem;
 				left: 0;
 				font-family: var(--font-primary);
 				font-weight: 700;
@@ -176,22 +173,28 @@
 
 // TODO: Find a CSS only solution to prevent duplicate psuodo elements. :first-of-type doe snot work
 .quiz__question-1 {
-	li:nth-of-type(1) [type='radio']:checked {
-		& ~ label::before {
-			content: 'Great we love people like you!';
-			opacity: 1;
+	margin-bottom: 20rem;
+
+	.quiz__to-style {
+		position: relative;
+
+		li:nth-of-type(1) [type='radio']:checked {
+			& ~ label::before {
+				content: 'Great we love people like you!';
+				opacity: 1;
+			}
 		}
-	}
-	li:nth-of-type(2) [type='radio']:checked {
-		& ~ label::before {
-			content: 'Hmmm, I am not sure you will like it here then';
-			opacity: 1;
+		li:nth-of-type(2) [type='radio']:checked {
+			& ~ label::before {
+				content: 'Hmmm, I am not sure you will like it here then';
+				opacity: 1;
+			}
 		}
-	}
-	li:nth-of-type(3) [type='radio']:checked {
-		& ~ label::before {
-			content: 'Are you sure? Sharing is caring!';
-			opacity: 1;
+		li:nth-of-type(3) [type='radio']:checked {
+			& ~ label::before {
+				content: 'Are you sure? Sharing is caring!';
+				opacity: 1;
+			}
 		}
 	}
 
@@ -228,6 +231,8 @@
 		button {
 			color: initial;
 			background-color: initial;
+			height: 100%;
+			width: 100%;
 		}
 	}
 
@@ -359,7 +364,8 @@
 				transition-duration: var(--anim-time-primary);
 			}
 
-			&:hover {
+			&:hover,
+			&:focus {
 				&:nth-of-type(1n + 2)::before {
 					transform: translateY(100%);
 				}
