@@ -2,12 +2,14 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devConfig = require('./webpack.dev');
 const parts = require('./webpack.parts');
 
 require('dotenv').config({ path: path.resolve(__dirname, '../vars.env') });
 
+const devMode = process.env.NODE_ENV !== 'production';
 /*==========================
 === Base config
 ===========================*/
@@ -24,6 +26,10 @@ const baseConfig = webpackMerge([
 				title: 'Webpack demo',
 				template: path.resolve(__dirname, '../index.html'),
 			}),
+			new MiniCssExtractPlugin({
+				filename: devMode ? '[name].css' : '[name].[hash].css',
+				chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+			}),
 			// new PreloadWebpackPlugin({
 			// rel: 'preload',
 			// 	as: 'script',
@@ -31,7 +37,9 @@ const baseConfig = webpackMerge([
 		],
 	},
 	// parts.loadCss(),
-	parts.loadSass(),
+	parts.loadSass({
+		devmode: devMode,
+	}),
 	parts.loadCssSVG(),
 ]);
 

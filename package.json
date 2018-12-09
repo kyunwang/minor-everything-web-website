@@ -7,6 +7,7 @@
 		"start": "npm run dev",
 		"dev-s": "webpack-serve --config=./config/webpack.config.js",
 		"dev": "webpack-dev-server --env=development --config=./config/webpack.config.js",
+		"production": "webpack-dev-server --env=production --config=./config/webpack.config.js",
 		"build": "webpack --env=production --config=./config/webpack.config.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -26,6 +27,7 @@
 		"dotenv": "^6.0.0",
 		"fast-sass-loader": "^1.4.5",
 		"html-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^0.5.0",
 		"node-sass": "^4.9.4",
 		"preload-webpack-plugin": "^2.3.0",
 		"prettier": "^1.13.7",
