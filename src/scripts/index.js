@@ -207,9 +207,6 @@ function removeHTMLTags(element) {
 				watchers.currentCharacter++;
 				nodes.codeEditor.scrollTop = nodes.codeEditor.scrollHeight;
 				if (watchers.currentCharacter < completeCSS.length) {
-					//  if (completeCSS[watchers.currentCharacter] === "}") {
-					// 	hljs.highlightBlock(nodes.codeEditor);
-					//  }
 					console.log(watchers.currentCharacter);
 					this.typewriterAnimation();
 				}
@@ -224,8 +221,6 @@ function removeHTMLTags(element) {
 				editorStyle.innerHTML = initialCSS;
 			});
 			nodes.quizMenu[1].addEventListener('click', () => {
-				// codeEditor.innerHTML = completeCSS;
-				// editorStyle.innerHTML = completeCSS;
 				watchers.currentCharacter = 0;
 				codeEditor.innerHTML = '';
 				this.typewriterAnimation();
