@@ -6,12 +6,13 @@
 		<title>Minor Everything Web</title>
 	</head>
 	<style id="editor-style">
-		/* This is the container of the question. There are a few CSS custom properties but you can just use  whatever you want */
+		/* TIP: Use the devtools */
+
 		.quiz__to-style {
+			/* This is the container of the question */
 		}
 
 		.quiz__to-style p {
-			font-family: futura, sans-serif;
 		}
 	</style>
 
@@ -46,7 +47,7 @@
 
 			<section class="quiz__question-1">
 				<aside>
-					<div>
+					<div class="quiz__editor-modal">
 						<p>
 							Well, this doesn't look good. Want to test your CSS skills to make this question
 							presentable?
@@ -54,7 +55,7 @@
 						<button>I pass</button><button>Let's do this!</button>
 					</div>
 
-					<div class="quiz__editor-container closed">
+					<div class="quiz__editor-container hide--vertical">
 						<ul class="quiz__menu">
 							<li></li>
 							<li><button>Reset</button></li>
@@ -62,8 +63,10 @@
 							<li><button>Close &#10005;</button></li>
 						</ul>
 
-						<code id="code-editor" contenteditable="true" spellcheck="false"> </code>
+						<code id="code-editor" contenteditable="true" spellcheck="false"></code>
 					</div>
+
+					<button id="button-open-editor">Open Editor</button>
 				</aside>
 
 				<div class="quiz__to-style">

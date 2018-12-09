@@ -206,10 +206,14 @@
 		border-radius: 0.8rem;
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
+		transition-property: max-height, opacity, width, height;
+		transition-duration: var(--anim-time-primary);
+		transition-timing-function: var(--anim-cubic-primary);
+
 		div {
 			// position: absolute;
 			&:first-of-type {
-				display: none;
+				// display: none;
 				button {
 					// all: unset;
 					display: inline-block;
@@ -231,8 +235,35 @@
 		button {
 			color: initial;
 			background-color: initial;
+			font-weight: 700;
 			height: 100%;
 			width: 100%;
+			z-index: 10;
+		}
+
+		& > button {
+			display: block;
+
+			max-height: 0;
+			opacity: 0;
+			padding: 0;
+
+			background-color: var(--yellow);
+			transition-property: max-height, opacity, width, height;
+			transition-duration: var(--anim-time-primary);
+			transition-timing-function: var(--anim-cubic-primary);
+		}
+
+		&.closed {
+			width: 12rem;
+			height: 4rem;
+
+			& > button {
+				padding: 0;
+				max-height: 5rem;
+				opacity: 1;
+				padding: inherit;
+			}
 		}
 	}
 
@@ -247,13 +278,16 @@
 	@media only screen and (min-width: 70rem) and (orientation: landscape) {
 		display: flex;
 		flex-flow: row-reverse nowrap;
+		justify-content: space-between;
 
-		div {
-			flex: 1;
+		& > div {
+			// flex: 1;
+			width: 50%;
 		}
 
 		aside {
-			flex: 1;
+			width: 50%;
+			// flex: 1;
 			margin: 0 0 0 1.6rem;
 		}
 	}
@@ -331,6 +365,12 @@
 
 .quiz__editor-container {
 	background-color: var(--grey-dark);
+	max-height: 100%;
+	opacity: 1;
+
+	transition-property: max-height, opacity;
+	transition-duration: var(--anim-time-primary);
+	transition-timing-function: var(--anim-cubic-primary);
 
 	ul {
 		display: grid;
@@ -418,7 +458,28 @@
 			outline: 1px solid slategrey;
 		}
 	}
+}
 
-	&.closed {
+.hide--vertical {
+	pointer-events: none;
+	max-height: 0;
+	opacity: 0;
+
+	// animation: hide--vertical var(--anim-time-primary) forwards;
+}
+
+@keyframes hide--vertical {
+	from {
+		max-height: 20rem;
+		opacity: 1;
+	}
+	// 90% {
+	// 	max-height: 0;
+	// 	opacity: 0;
+	// }
+	to {
+		display: none;
+		max-height: 0;
+		opacity: 0;
 	}
 }
