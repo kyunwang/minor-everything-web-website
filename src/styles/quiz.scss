@@ -113,7 +113,8 @@
 				font-family: var(--font-primary);
 				font-weight: 700;
 				height: 6rem;
-				width: 34rem;
+				width: max-content;
+				max-width: 100%;
 				background-color: var(--yellow);
 				border-radius: 4rem;
 				padding-left: 7.2rem;
