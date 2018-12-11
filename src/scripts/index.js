@@ -159,6 +159,7 @@ function addObserver(element, cb, options = {}) {
 		question2: $$(`[name="question-2"]`),
 		question3: $$(`[name="question-3"]`),
 		question1AsideContainer: $('.quiz__question-1 aside'),
+		question2Container: $('.quiz__question-2'),
 		codeEditorContainer: $('.quiz__editor-container'),
 		codeEditor: $('#code-editor'),
 		editorStyle: $('#editor-style'),
@@ -222,17 +223,48 @@ function addObserver(element, cb, options = {}) {
 			addObserver(nodes.originalProgram, cb);
 		},
 		initQuestions() {
-			addEvents(nodes.question2, 'change', function(e) {
+			this.initQuestion2();
+		},
+		initQuestion2() {
+			const { question2, question2Container } = nodes;
+			addEvents(question2, 'change', function(e) {
 				const subjects = $$(`[data-subject="${e.target.value}"]`);
+
+				// Toggle subjects in program section
 				subjects.forEach(function(subject) {
 					subject.classList.toggle('selected');
 				});
+
+				// Toggle feedback
+				const amountChecked = question2.filter(
+					question => question.checked === true
+				).length;
+				console.log(amountChecked);
+
+				// quickest according to: https://stackoverflow.com/a/12259830
+				if (3 > amountChecked) {
+					question2Container.classList.remove('show-feedback-1');
+				} else if (9 <= amountChecked) {
+					question2Container.classList.remove('show-feedback-3');
+					question2Container.classList.add('show-feedback-3');
+				} else if (6 <= amountChecked) {
+					question2Container.classList.remove('show-feedback-3');
+					question2Container.classList.add('show-feedback-2');
+				} else if (3 <= amountChecked) {
+					question2Container.classList.remove('show-feedback-3');
+					question2Container.classList.add('show-feedback-1');
+				}
 
 				watchers.shouldUpdate = true;
 			});
 		},
 		initQuizModal() {
-			const { quizModal, codeEditorContainer, question1Container, question1AsideContainer } = nodes;
+			const {
+				quizModal,
+				codeEditorContainer,
+				question1Container,
+				question1AsideContainer,
+			} = nodes;
 
 			const modalButtons = quizModal.querySelectorAll('button');
 			const openEditorButton = $('#button-open-editor');
@@ -311,7 +343,8 @@ function addObserver(element, cb, options = {}) {
 				const arrItem = Array.from(item);
 
 				return arrItem.reduce((accumulator, currentValue) => {
-					if (currentValue.classList.contains('selected')) return accumulator + 1;
+					if (currentValue.classList.contains('selected'))
+						return accumulator + 1;
 					return accumulator;
 				}, 0);
 			});
