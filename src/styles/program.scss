@@ -96,7 +96,7 @@
 		@include media-desktop {
 			&:checked {
 				& ~ .program__description {
-					max-height: 40rem;
+					max-height: 50rem;
 					opacity: 1;
 				}
 			}
@@ -160,6 +160,11 @@
 		justify-content: flex-end;
 		p {
 			width: 60%;
+			margin: 0 0 1.6rem;
+
+			&:last-of-type {
+				margin: 0;
+			}
 		}
 
 		ul {
