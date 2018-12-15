@@ -116,13 +116,12 @@
 				left: 0;
 				font-family: var(--font-primary);
 				font-weight: 700;
-				height: 6rem;
+				min-height: 6rem;
 				width: max-content;
 				max-width: 100%;
 				background-color: var(--yellow);
 				border-radius: 4rem;
-				padding-left: 7.2rem;
-				padding-right: 1.6rem;
+				padding: 0.8rem 1.6rem 0.8rem 7.2rem;
 
 				opacity: 0;
 				pointer-events: none;
@@ -342,49 +341,52 @@
 			}
 		}
 	}
+}
 
-	// li:nth-last-child(n + 3):first-child,
-	// li:nth-last-child(n + 3):first-child ~ li {
-	// 	[type='checkbox']:checked {
-	// 		& ~ label::before {
-	// 			content: 'bla';
-	// 			opacity: 1;
-	// 		}
+.quiz__question-3 {
+	// [type='checkbox']:nth-last-child(n + 2):first-child,
+	// [type='checkbox']:nth-last-child(n + 2):first-child ~ [type='checkbox'] {
+	// 	& ~ label::before {
+	// 		content: 'feedback3';
+	// 		// opacity: 1;
 	// 	}
 	// 	color: blue;
 	// }
 
-	// li:nth-last-child(n + 6):first-child,
-	// li:nth-last-child(n + 6):first-child ~ li {
-	// 	[type='checkbox']:checked {
-	// 		& ~ label::before {
-	// 			content: 'blabla';
-	// 			opacity: 1;
-	// 		}
-	// 	}
-	// 	color: green;
-	// }
-
-	// li:nth-last-child(n + 8):first-child,
-	// li:nth-last-child(n + 8):first-child ~ li {
-	// 	[type='checkbox']:checked {
-	// 		& ~ label::before {
-	// 			content: 'blablabla';
-	// 			opacity: 1;
-	// 		}
-	// 	}
-	// 	color: red;
-	// }
-}
-
-.quiz__question-3 {
-	[type='checkbox']:nth-last-child(n + 2):first-child,
-	[type='checkbox']:nth-last-child(n + 2):first-child ~ [type='checkbox'] {
-		& ~ label::before {
-			content: 'feedback3';
-			// opacity: 1;
+	li:nth-of-type(1) {
+		input:checked {
+			& ~ label::before {
+				content: "Time to improve the quality of experience on the web! Design, make and verify the designs you create. Don't forget your users!";
+				opacity: 1;
+			}
 		}
-		color: blue;
+	}
+
+	li:nth-of-type(2) {
+		input:checked {
+			& ~ label::before {
+				content: 'Web socket, real time APIs to create seamless exchange of data through the world.';
+				opacity: 1;
+			}
+		}
+	}
+
+	li:nth-of-type(3) {
+		input:checked {
+			& ~ label::before {
+				content: 'Creating accessible, fast and performing products. Where people with and without disabilities, bad and good connection etc. can experience a great time.';
+				opacity: 1;
+			}
+		}
+	}
+
+	li:nth-of-type(4) {
+		input:checked {
+			& ~ label::before {
+				content: 'Ready to dive into Server Side JavaScript? Optimalization and Service Workers? Optimize the underperforming web and create offline experiences while at it!';
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -587,7 +589,7 @@
 					left: 0;
 					font-family: var(--font-primary);
 					font-weight: 700;
-					height: 6rem;
+					min-height: 6rem;
 					width: 34rem;
 					background-image: url('../assets/test_feedback.svg');
 					background-position: left center;
@@ -595,8 +597,7 @@
 					background-repeat: no-repeat;
 					background-color: var(--yellow);
 					border-radius: 4rem;
-					padding-left: 7.2rem;
-					padding-right: 1.6rem;
+					padding: 0.8rem 1.6rem 0.8rem 7.2rem;
 					opacity: 0;
 					pointer-events: none;
 					transition-property: max-width, opacity;
