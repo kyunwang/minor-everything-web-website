@@ -327,6 +327,7 @@ function addObserver(element, cb, options = {}) {
 				watchers.currentCharacter = 0;
 				codeEditor.innerHTML = initialCSS;
 				editorStyle.innerHTML = initialCSS;
+				hljs.highlightBlock(codeEditor);
 			});
 
 			quizMenuButtons[1].addEventListener('click', () => {
@@ -349,6 +350,7 @@ function addObserver(element, cb, options = {}) {
 				codeEditor.innerHTML += completeCSS[watchers.currentCharacter];
 				watchers.currentCharacter++;
 				codeEditor.scrollTop = codeEditor.scrollHeight;
+
 				if (watchers.currentCharacter < completeCSS.length) {
 					if (completeCSS[watchers.currentCharacter] === '}') {
 						hljs.highlightBlock(codeEditor);
