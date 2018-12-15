@@ -37,6 +37,10 @@ html {
 body > div {
 	// Until overflowing element is found on small screens
 	overflow-x: hidden;
+
+	& > section {
+		max-width: 100rem;
+	}
 }
 
 body,

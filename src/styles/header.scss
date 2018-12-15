@@ -1,7 +1,7 @@
 .header__container {
 	@include background-image('../assets/main_blob.svg', 0 0);
 	height: 60vh;
-	margin: auto;
+	// margin: auto;
 	padding: 10% var(--indent-1) 10%;
 
 	h1 {

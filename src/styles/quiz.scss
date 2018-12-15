@@ -180,8 +180,10 @@
 		position: relative;
 		display: none;
 		overflow: hidden;
+		color: #fff;
 		margin: 2.4rem 0;
 		border-radius: 0.8rem;
+		background-color: var(--grey-dark);
 		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 		transition-property: max-height, opacity, width, height;
@@ -197,9 +199,23 @@
 					display: inline-block;
 					border-radius: 0;
 					width: 50%;
+					color: #fff;
+
+					transition-property: color;
+					transition-timing-function: var(--anim-cubic-primary);
+					transition-duration: var(--anim-time-primary);
+
 					&:last-of-type {
 						background-color: var(--yellow);
 						font-weight: 700;
+						color: initial;
+					}
+
+					&:hover {
+						color: var(--yellow);
+						&:last-of-type {
+							color: #fff;
+						}
 					}
 				}
 			}
@@ -208,6 +224,10 @@
 		p {
 			margin: 0;
 			padding: 1.6rem;
+
+			span {
+				font-size: 1rem;
+			}
 		}
 
 		button {
@@ -256,16 +276,18 @@
 
 	@media only screen and (min-width: 70rem) and (orientation: landscape) {
 		display: flex;
-		flex-flow: row-reverse nowrap;
-		justify-content: space-between;
+		flex-flow: column;
+		// flex-flow: row-reverse nowrap;
+		// justify-content: space-between;
 
 		& > div {
-			width: 50%;
+			// width: 50%;
 		}
 
 		aside {
-			width: 50%;
-			margin: 0 0 0 1.6rem;
+			width: 70%;
+			margin: 2.4rem auto;
+			// margin: 0 0 0 1.6rem;
 		}
 	}
 }
