@@ -38,10 +38,10 @@
 
 	label {
 		position: relative;
-		display: inline-block;
+		display: block;
 		font-size: var(--font-title-sub);
 		font-weight: 700;
-		width: max-content;
+		// width: max-content;
 		margin-bottom: 1.6rem;
 
 		cursor: pointer;
@@ -116,9 +116,7 @@
 
 	li {
 		// position: relative;
-		&:nth-of-type(1n + 2) {
-			margin-left: 1.6rem;
-		}
+		margin-bottom: 0.8rem;
 
 		&.selected {
 			span::before {
@@ -168,9 +166,6 @@
 
 		li {
 			margin-bottom: 1.6rem;
-			&:nth-of-type(1n + 2) {
-				margin-left: 0;
-			}
 		}
 	}
 }
