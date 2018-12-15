@@ -590,7 +590,7 @@
 					font-family: var(--font-primary);
 					font-weight: 700;
 					min-height: 6rem;
-					width: 34rem;
+					max-width: 34rem;
 					background-image: url('../assets/test_feedback.svg');
 					background-position: left center;
 					background-size: 6rem;
@@ -706,8 +706,8 @@
 				left: 0;
 				font-family: var(--font-primary);
 				font-weight: 700;
-				height: 6rem;
-				width: 34rem;
+				min-height: 6rem;
+				max-max-width: 34rem;
 				background-image: url('../assets/test_feedback.svg');
 				background-position: left center;
 				background-size: 6rem;
