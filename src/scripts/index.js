@@ -8,7 +8,9 @@ hljs.registerLanguage('css', css);
 const initialCSS = `
 
 /* TIP: Use the devtools */
-/* GOAL: Style the question like the questions below or however you like*/
+
+/* GOAL: Style the question like the questions below or however you like */
+/* CHALLENGE: No classes can be used, apart from the container */
 
 .quiz__to-style {
   /* This is the container of the question */
@@ -25,7 +27,7 @@ const completeCSS = `
   padding-left: var(--indent-1);
 }
 
-.quiz__to-style > ul {
+.quiz__to-style ul {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -107,7 +109,7 @@ const completeCSS = `
   font-weight: 700;
   height: 6rem;
   width: 34rem;
-  background-image: url('./src/assets/test_feedback.svg');
+  background-image: url('./assets/test_feedback.svg');
   background-position: left center;
   background-size: 6rem;
   background-repeat: no-repeat;
