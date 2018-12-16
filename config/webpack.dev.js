@@ -1,3 +1,5 @@
+const path = require('path');
+
 exports.devServer = ({ host, port } = {}) => ({
 	/*==========================
 	=== Config for webpack-serve - Choose either this or dev server
@@ -16,5 +18,6 @@ exports.devServer = ({ host, port } = {}) => ({
 		port,
 		open: false,
 		overlay: true,
+		contentBase: path.join(__dirname, '../src'),
 	},
 });

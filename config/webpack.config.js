@@ -24,7 +24,7 @@ const baseConfig = webpackMerge([
 		plugins: [
 			new HTMLWebpackPlugin({
 				title: 'Webpack demo',
-				template: path.resolve(__dirname, '../index.html'),
+				template: path.resolve(__dirname, '../src/index.html'),
 			}),
 			new MiniCssExtractPlugin({
 				filename: devMode ? '[name].css' : '[name].[hash].css',

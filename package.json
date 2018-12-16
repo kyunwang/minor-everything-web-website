@@ -9,11 +9,13 @@
 		"dev": "webpack-dev-server --env=development --config=./config/webpack.config.js",
 		"production": "webpack-dev-server --env=production --config=./config/webpack.config.js",
 		"build": "webpack --env=production --config=./config/webpack.config.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"deploy": "gh-pages -d dist",
+		"gh": "npm run build && npm run deploy"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/kyunwang/xxx.git"
+		"url": "git+https://github.com/kyunwang/minor-everything-web-website.git"
 	},
 	"keywords": [],
 	"author": "Kang Yun Wang <kevinwang8011@hotmail.com>",
@@ -21,11 +23,12 @@
 	"bugs": {
 		"url": ""
 	},
-	"homepage": "",
+	"homepage": "https://kyunwang.github.io/minor-everything-web-website/",
 	"devDependencies": {
 		"css-loader": "^1.0.0",
 		"dotenv": "^6.0.0",
 		"fast-sass-loader": "^1.4.5",
+		"gh-pages": "^2.0.1",
 		"html-webpack-plugin": "^3.2.0",
 		"mini-css-extract-plugin": "^0.5.0",
 		"node-sass": "^4.9.4",
