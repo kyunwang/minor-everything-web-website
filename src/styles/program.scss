@@ -1,5 +1,6 @@
 .program__container {
 	padding-left: var(--indent-1);
+	padding-right: var(--indent-3);
 
 	h2 {
 		margin-bottom: 1.6rem;
@@ -187,4 +188,8 @@
 	&.show {
 		display: block;
 	}
+}
+
+[data-program] {
+	padding-left: var(--indent-3);
 }
