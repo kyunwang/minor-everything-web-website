@@ -1,7 +1,5 @@
 # Website Minor Everything Web CMD (re-design)
 
-# Website Minor Everything Web CMD (re-design)
-
 _Doc/Progress in progress_
 
 Challenge:
@@ -69,11 +67,29 @@ Starting from card storting to sketches, design and ending with design feedback.
 
 ### Card sorting
 
-![](docs/card-sort-1)
+Sorting current content and restructuring
+![](docs/card-sort-1.jpg)
+![](docs/card-sort-2.jpg)
 
 ### Sketches
 
+Random sketches (not the most organized I must say)
+![](docs/sketch-1.jpg)
+![](docs/sketch-2.jpg)
+![](docs/sketch-3.jpg)
+![](docs/sketch-4.jpg)
+![](docs/sketch-5.jpg)
+
 ### Design
+
+Start design to use as starting point for code and testing with users
+
+<details>
+<summary>Click this to show</summary>
+
+![](docs/design.jpg)
+
+<details>
 
 ### Design feedback
 
