@@ -12,6 +12,11 @@
 		margin-bottom: 1.6rem;
 	}
 
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
 	@include media-desktop-l {
 		align-items: center;
 		background-size: 70vh;
