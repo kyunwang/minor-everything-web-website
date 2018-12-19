@@ -6,492 +6,485 @@
 		<title>Minor Everything Web</title>
 	<link href="main.css" rel="stylesheet"></head>
 	<style id="editor-style">
+		/* TIP: Use the devtools */
 
-/* TIP: Use the devtools */
+		/* GOAL: Style the question like the questions below or however you like */
+		/* CHALLENGE: No classes can be used, apart from the container */
 
-/* GOAL: Style the question like the questions below or however you like */
-/* CHALLENGE: No classes can be used, apart from the container */
+		.quiz__to-style {
+			/* This is the container of the question */
+		}
 
-.quiz__to-style {
-  /* This is the container of the question */
-}
-
-.quiz__to-style p {
-}
+		.quiz__to-style p {
+		}
 	</style>
 
 	<body class="no-js">
-		<div>
-			<ul class="menu__container">
-				<li><a href="#p-intro">The minor</a></li>
-				<li><a href="#p-quiz">About you</a></li>
-				<li><a href="#p-program">Program</a></li>
-				<li><a href="#p-sign-up">Signup</a></li>
-			</ul>
+		<ul class="menu__container">
+			<li><a href="#p-intro">The minor</a></li>
+			<li><a href="#p-quiz">About you</a></li>
+			<li><a href="#p-program">Program</a></li>
+			<li><a href="#p-sign-up">Signup</a></li>
+		</ul>
 
-			<section class="header__container">
-				<h1>
-					Minor <br />
-					Webdevelopment
-				</h1>
-				<p>Ready to explore the web with us?</p>
-				<a href="#p-intro"><button>Let's explore!</button></a>
-			</section>
+		<section class="header__container">
+			<h1>
+				Minor <br />
+				Webdevelopment
+			</h1>
+			<p>Ready to explore the web with us?</p>
+			<a href="#p-intro"><button>Let's explore!</button></a>
+		</section>
 
-			<section id="p-intro" class="intro__container">
-				<h2>Ready to up your tech game?</h2>
-				<p>
-					Are you always ready to learn something? Love to hear about the newest
-					technologies on the web? Love to better your technical (design)
-					skills? Dreaming of Real-time. Responsive and Reactive or wanting to
-					learn about it? Then this is the minor you are looking for!
-				</p>
-			</section>
+		<section id="p-intro" class="intro__container">
+			<h2>Ready to up your tech game?</h2>
+			<p>
+				Are you always ready to learn something? Love to hear about the newest
+				technologies on the web? Love to better your technical (design) skills?
+				Dreaming of Real-time. Responsive and Reactive or wanting to learn about
+				it? Then this is the minor you are looking for!
+			</p>
+		</section>
 
-			<section id="p-quiz" class="quiz__container">
-				<h2>Tell us about you!</h2>
-				<p>
-					A little quiz here if you don't mind, just so that we get to know each other a bit better.
-				</p>
+		<section id="p-quiz" class="quiz__container">
+			<h2>Tell us about you!</h2>
+			<p>
+				A little quiz here if you don't mind, just so that we get to know each
+				other a bit better.
+			</p>
 
-				<section class="quiz__question-1">
-					<aside>
-						<div class="quiz__editor-modal">
-							<p>
-								Well, this doesn't look good. Want to test your CSS skills to
-								make this question presentable?
+			<section class="quiz__question-1">
+				<aside>
+					<div class="quiz__editor-modal">
+						<p>
+							Well, this doesn't look good. Want to test your CSS skills to make
+							this question presentable?
 
-								<span>GOAL: Style the question like the others below or however you like</span>
-								<span>CHALLENGE: No classes can be used, apart from the container</span>
-							</p>
-							<button>I pass</button><button>Let's do this!</button>
-						</div>
+							<span
+								>GOAL: Style the question like the others below or however you
+								like</span
+							>
+							<span
+								>CHALLENGE: No classes can be used, apart from the
+								container</span
+							>
+						</p>
+						<button>I pass</button><button>Let's do this!</button>
+					</div>
 
-						<div class="quiz__editor-container hide--vertical">
-							<ul class="quiz__menu">
-								<li></li>
-								<li><button>Reset</button></li>
-								<li><button>Style for me</button></li>
-								<li><button>Close &#10005;</button></li>
-							</ul>
+					<div class="quiz__editor-container hide--vertical">
+						<ul class="quiz__menu">
+							<li></li>
+							<li><button>Reset</button></li>
+							<li><button>Style for me</button></li>
+							<li><button>Close &#10005;</button></li>
+						</ul>
 
-							<pre>
+						<pre>
 								<code
 									id="code-editor"
 									contenteditable="true"
 									spellcheck="false"
 								></code>
 							</pre>
-						</div>
-
-						<button id="button-open-editor">Open Editor</button>
-					</aside>
-
-					<div class="quiz__to-style">
-						<p>
-							Would you like to learn and share knowledge with other students?
-						</p>
-						<ul>
-							<li>
-								<input
-									type="radio"
-									name="question-1"
-									id="question-1-a-1"
-									value="yes"
-								/>
-								<label for="question-1-a-1"><span></span>I sure do!</label>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="question-1"
-									id="question-1-a-2"
-									value="no"
-								/>
-								<label for="question-1-a-2"
-									><span></span>I like to learn alone</label
-								>
-							</li>
-							<li>
-								<input
-									type="radio"
-									name="question-1"
-									id="question-1-a-3"
-									value="maybe"
-								/>
-								<label for="question-1-a-3"
-									><span></span>Not sure about this</label
-								>
-							</li>
-						</ul>
 					</div>
-				</section>
 
-				<section class="quiz__question-container quiz__question-2">
-					<p>Getting enthousiastic about any of the following?</p>
+					<button id="button-open-editor">Open Editor</button>
+				</aside>
+
+				<div class="quiz__to-style">
+					<p>
+						Would you like to learn and share knowledge with other students?
+					</p>
 					<ul>
 						<li>
 							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-1"
-								value="node-js"
+								type="radio"
+								name="question-1"
+								id="question-1-a-1"
+								value="yes"
 							/>
-							<label for="question-2-a-1"><span></span>Node.js</label>
+							<label for="question-1-a-1"><span></span>I sure do!</label>
 						</li>
 						<li>
 							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-2"
-								value="interaction-design"
+								type="radio"
+								name="question-1"
+								id="question-1-a-2"
+								value="no"
 							/>
-							<label for="question-2-a-2"
-								><span></span>Interaction Design</label
+							<label for="question-1-a-2"
+								><span></span>I like to learn alone</label
 							>
 						</li>
 						<li>
 							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-3"
-								value="progressive-enhancement"
+								type="radio"
+								name="question-1"
+								id="question-1-a-3"
+								value="maybe"
 							/>
-							<label for="question-2-a-3"
-								><span></span>Progressive Enhancement</label
+							<label for="question-1-a-3"
+								><span></span>Not sure about this</label
 							>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-4"
-								value="accessibility"
-							/>
-							<label for="question-2-a-4"><span></span>Accessibility</label>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-5"
-								value="inclusive-design"
-							/>
-							<label for="question-2-a-5"><span></span>Inclusive Design</label>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-6"
-								value="real-time-web"
-							/>
-							<label for="question-2-a-6"><span></span>Real Time Web</label>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-7"
-								value="performance"
-							/>
-							<label for="question-2-a-7"><span></span>Performance</label>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-8"
-								value="responsiveness"
-							/>
-							<label for="question-2-a-8"><span></span>Responsiveness</label>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-9"
-								value="browser-compatability"
-							/>
-							<label for="question-2-a-9"
-								><span></span>Browser Compatability</label
-							>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-10"
-								value="progressive-web-apps"
-							/>
-							<label for="question-2-a-10"
-								><span></span>Progressive Web Apps</label
-							>
-						</li>
-						<li>
-							<input
-								type="checkbox"
-								name="question-2"
-								id="question-2-a-11"
-								value="javascript"
-							/>
-							<label for="question-2-a-11"><span></span>JavaScript</label>
 						</li>
 					</ul>
-				</section>
-
-				<section class="quiz__question-container quiz__question-3">
-					<p>What you are most interested in learning about is...</p>
-					<ul>
-						<li>
-							<input type="radio" name="question-3" id="question-3-a-1" />
-							<label for="question-3-a-1">
-								<span></span>Designing for users
-							</label>
-						</li>
-						<li>
-							<input type="radio" name="question-3" id="question-3-a-2" />
-							<label for="question-3-a-2">
-								<span></span>Real time data exchange
-							</label>
-						</li>
-						<li>
-							<input type="radio" name="question-3" id="question-3-a-3" />
-							<label for="question-3-a-3">
-								<span></span>A web for everyone
-							</label>
-						</li>
-						<li>
-							<input type="radio" name="question-3" id="question-3-a-4" />
-							<label for="question-3-a-4">
-								<span></span>Performant and quick web experiences
-							</label>
-						</li>
-					</ul>
-				</section>
+				</div>
 			</section>
 
-			<section id="p-program" class="program__container">
+			<section class="quiz__question-container quiz__question-2">
+				<p>Getting enthousiastic about any of the following?</p>
 				<ul>
-					<li data-program-sections="love">
-						<h2>You are gonna love these courses</h2>
-						<p>
-							We are sure you are going to love the courses we are giving. The
-							courses below are based on the choices you made in the quiz
-						</p>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-1"
+							value="node-js"
+						/>
+						<label for="question-2-a-1"><span></span>Node.js</label>
 					</li>
-
-					<li data-program-sections="interest">
-						<h2>These might also tickle your senses</h2>
-						<p>
-							Placed number two? No problem! The courses here will take your
-							interest too!
-						</p>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-2"
+							value="interaction-design"
+						/>
+						<label for="question-2-a-2"><span></span>Interaction Design</label>
 					</li>
-
-					<li data-program-sections="neutral">
-						<h2>And you might like these too</h2>
-						<p>
-							Maybe not all subjects you take interest in might be listed here,
-							but you are going to learn a lot here too!
-						</p>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-3"
+							value="progressive-enhancement"
+						/>
+						<label for="question-2-a-3"
+							><span></span>Progressive Enhancement</label
+						>
 					</li>
-
-					<li data-program="cttr">
-						<input type="checkbox" name="program" id="program-1" />
-						<label for="program-1">CSS to the rescue</label>
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="responsiveness">
-										<span></span>Responsiveness
-									</li>
-									<li data-subject="interaction-design">
-										<span></span>Interaction Design
-									</li>
-									<li data-subject="accessibility">
-										<span></span>Accessibility
-									</li>
-								</ul>
-							</aside>
-							<div>
-								<p>
-									During this course we will be dirtying our hand with CSS. We
-									are going to think and make good working responsive solutions
-									for complex interfaces. This is really important as many
-									designers aren’t that well versed in this. It is also really
-									important to understand a few basic principles behind CSS,
-									without CSS will become magicals and weird. With good
-									understanding you get control and ables you to make CSS do
-									what you want. All of this is needed to form websites with
-									attention to detail. Websites which brings a smile to faces.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-4"
+							value="accessibility"
+						/>
+						<label for="question-2-a-4"><span></span>Accessibility</label>
 					</li>
-
-					<li data-program="wafs">
-						<input type="checkbox" name="program" id="program-2" />
-						<label for="program-2">Web App from scratch</label>
-
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="javascript"><span></span>JavaScript</li>
-								</ul>
-							</aside>
-
-							<div>
-								<p>
-									As much native HTML, CSS & JavaScript as possible. We will be
-									making a web app from scratch without frameworks or
-									unnecessary libraries. The deliverable is a modular made
-									prototype for an single page web app. Your will fetch data
-									from an external API, which when needed will be manipulated
-									and showed in the app. You will be learning how to structure
-									your code and how to make an Web App from Scratch. With this
-									knowledge you will start to better understand how APIs,
-									libraries and frameworks work.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-5"
+							value="inclusive-design"
+						/>
+						<label for="question-2-a-5"><span></span>Inclusive Design</label>
 					</li>
-
-					<li data-program="bt">
-						<input type="checkbox" name="program" id="program-3" />
-						<label for="program-3">Browser technologies</label>
-
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="progressive-enhancement">
-										<span></span>Progressive Enhancement
-									</li>
-									<li data-subject="browser-compatability">
-										<span></span>Browser Compatability
-									</li>
-								</ul>
-							</aside>
-							<div>
-								<p>
-									One of the greatest principles of the web is that it is for
-									everyone, really. Anyone with an computer and browser should
-									be able to make use of the web. Our web is not a controlled
-									(development) environment. You can be sure that nobody will
-									see the same as what you will be seeing in your browser. Of
-									course there are technical constrains too. Take the
-									measurements of the browser or device for instance, the way of
-									interaction, quality of the hardware and network. And there
-									are people of all kinds.
-								</p>
-								<p>
-									During this course you will be learning how to build great,
-									robust and accessible websites. You will learn about
-									Progressive Enhancement, Feature Detection and Fallbacks. The
-									web is for everybody and we will teach you how you can make
-									that possible.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-6"
+							value="real-time-web"
+						/>
+						<label for="question-2-a-6"><span></span>Real Time Web</label>
 					</li>
-
-					<li data-program="pm">
-						<input type="checkbox" name="program" id="program-4" />
-						<label for="program-4">Performance matters</label>
-
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="performance"><span></span>Performance</li>
-									<li data-subject="progressive-web-apps">
-										<span></span>Progressive Web Apps
-									</li>
-									<li data-subject="node-js"><span></span>Node.js</li>
-								</ul>
-							</aside>
-							<div>
-								<p>
-									Performance Matters, as the name says you will be learning
-									about performance on the web. We will be optimizing the
-									performance of existing web applications. We will work on
-									HTML, CSS and JavaScript optimalizations and how to make
-									better use of the HTTP protocol.
-								</p>
-								<p>
-									As part of Progressive Web Apps (PWA), Service Workers will be
-									put in to use to improve the performance of applications and
-									to make it available offline.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-7"
+							value="performance"
+						/>
+						<label for="question-2-a-7"><span></span>Performance</label>
 					</li>
-
-					<li data-program="rtw">
-						<input type="checkbox" name="program" id="program-5" />
-						<label for="program-5">Real-Time web</label>
-
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="node-js"><span></span>Node.js</li>
-									<li data-subject="real-time-web">
-										<span></span>Real Time Web
-									</li>
-								</ul>
-							</aside>
-							<div>
-								<p>
-									How to make real-time / live data insightful and accessible,
-									that is what Real-Time Web will be teaching you. With Web
-									Sockets you will be creating an (prototype) application with
-									the data from real time APIs. You could create a chat room,
-									transportation app or multiplayer game for instance.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-8"
+							value="responsiveness"
+						/>
+						<label for="question-2-a-8"><span></span>Responsiveness</label>
 					</li>
-
-					<li data-program="wd">
-						<input type="checkbox" name="program" id="program-6" />
-						<label for="program-6">Web design</label>
-
-						<div class="program__description">
-							<aside>
-								<ul>
-									<li data-subject="inclusive-design">
-										<span></span>Inclusive Design
-									</li>
-									<li data-subject="accessibility">
-										<span></span>Accessibility
-									</li>
-									<li data-subject="interaction-design">
-										<span></span>Interaction Design
-									</li>
-								</ul>
-							</aside>
-							<div>
-								<p>
-									Experimenting with Design and User Interface(UI), making use
-									of design principles, verifying design choices, user testing
-									and more. We will show you the ropes of it all.
-								</p>
-								<p>
-									During your time in this course you will be taught how to make
-									use of several UI principles. You will also be introduced to
-									the other side of designing for everyone (Inclusive Design),
-									namely Exclusive Design. The design choices you have made you
-									will also be verifying with real users.
-								</p>
-							</div>
-						</div>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-9"
+							value="browser-compatability"
+						/>
+						<label for="question-2-a-9"
+							><span></span>Browser Compatability</label
+						>
+					</li>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-10"
+							value="progressive-web-apps"
+						/>
+						<label for="question-2-a-10"
+							><span></span>Progressive Web Apps</label
+						>
+					</li>
+					<li>
+						<input
+							type="checkbox"
+							name="question-2"
+							id="question-2-a-11"
+							value="javascript"
+						/>
+						<label for="question-2-a-11"><span></span>JavaScript</label>
 					</li>
 				</ul>
 			</section>
 
-			<section id="p-sign-up" class="sign-up__container">
-				<h2>Are you ready to join?</h2>
-				<button>Sign up!</button>
+			<section class="quiz__question-container quiz__question-3">
+				<p>What you are most interested in learning about is...</p>
+				<ul>
+					<li>
+						<input type="radio" name="question-3" id="question-3-a-1" />
+						<label for="question-3-a-1">
+							<span></span>Designing for users
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="question-3" id="question-3-a-2" />
+						<label for="question-3-a-2">
+							<span></span>Real time data exchange
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="question-3" id="question-3-a-3" />
+						<label for="question-3-a-3">
+							<span></span>A web for everyone
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="question-3" id="question-3-a-4" />
+						<label for="question-3-a-4">
+							<span></span>Performant and quick web experiences
+						</label>
+					</li>
+				</ul>
 			</section>
-		</div>
+		</section>
+
+		<section id="p-program" class="program__container">
+			<ul>
+				<li data-program-sections="love">
+					<h2>You are gonna love these courses</h2>
+					<p>
+						We are sure you are going to love the courses we are giving. The
+						courses below are based on the choices you made in the quiz
+					</p>
+				</li>
+
+				<li data-program-sections="interest">
+					<h2>These might also tickle your senses</h2>
+					<p>
+						Placed number two? No problem! The courses here will take your
+						interest too!
+					</p>
+				</li>
+
+				<li data-program-sections="neutral">
+					<h2>And you might like these too</h2>
+					<p>
+						Maybe not all subjects you take interest in might be listed here,
+						but you are going to learn a lot here too!
+					</p>
+				</li>
+
+				<li data-program="cttr">
+					<input type="checkbox" name="program" id="program-1" />
+					<label for="program-1">CSS to the rescue</label>
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="responsiveness">
+									<span></span>Responsiveness
+								</li>
+								<li data-subject="interaction-design">
+									<span></span>Interaction Design
+								</li>
+								<li data-subject="accessibility"><span></span>Accessibility</li>
+							</ul>
+						</aside>
+						<div>
+							<p>
+								During this course we will be dirtying our hand with CSS. We are
+								going to think and make good working responsive solutions for
+								complex interfaces. This is really important as many designers
+								aren’t that well versed in this. It is also really important to
+								understand a few basic principles behind CSS, without CSS will
+								become magicals and weird. With good understanding you get
+								control and ables you to make CSS do what you want. All of this
+								is needed to form websites with attention to detail. Websites
+								which brings a smile to faces.
+							</p>
+						</div>
+					</div>
+				</li>
+
+				<li data-program="wafs">
+					<input type="checkbox" name="program" id="program-2" />
+					<label for="program-2">Web App from scratch</label>
+
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="javascript"><span></span>JavaScript</li>
+							</ul>
+						</aside>
+
+						<div>
+							<p>
+								As much native HTML, CSS & JavaScript as possible. We will be
+								making a web app from scratch without frameworks or unnecessary
+								libraries. The deliverable is a modular made prototype for an
+								single page web app. Your will fetch data from an external API,
+								which when needed will be manipulated and showed in the app. You
+								will be learning how to structure your code and how to make an
+								Web App from Scratch. With this knowledge you will start to
+								better understand how APIs, libraries and frameworks work.
+							</p>
+						</div>
+					</div>
+				</li>
+
+				<li data-program="bt">
+					<input type="checkbox" name="program" id="program-3" />
+					<label for="program-3">Browser technologies</label>
+
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="progressive-enhancement">
+									<span></span>Progressive Enhancement
+								</li>
+								<li data-subject="browser-compatability">
+									<span></span>Browser Compatability
+								</li>
+							</ul>
+						</aside>
+						<div>
+							<p>
+								One of the greatest principles of the web is that it is for
+								everyone, really. Anyone with an computer and browser should be
+								able to make use of the web. Our web is not a controlled
+								(development) environment. You can be sure that nobody will see
+								the same as what you will be seeing in your browser. Of course
+								there are technical constrains too. Take the measurements of the
+								browser or device for instance, the way of interaction, quality
+								of the hardware and network. And there are people of all kinds.
+							</p>
+							<p>
+								During this course you will be learning how to build great,
+								robust and accessible websites. You will learn about Progressive
+								Enhancement, Feature Detection and Fallbacks. The web is for
+								everybody and we will teach you how you can make that possible.
+							</p>
+						</div>
+					</div>
+				</li>
+
+				<li data-program="pm">
+					<input type="checkbox" name="program" id="program-4" />
+					<label for="program-4">Performance matters</label>
+
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="performance"><span></span>Performance</li>
+								<li data-subject="progressive-web-apps">
+									<span></span>Progressive Web Apps
+								</li>
+								<li data-subject="node-js"><span></span>Node.js</li>
+							</ul>
+						</aside>
+						<div>
+							<p>
+								Performance Matters, as the name says you will be learning about
+								performance on the web. We will be optimizing the performance of
+								existing web applications. We will work on HTML, CSS and
+								JavaScript optimalizations and how to make better use of the
+								HTTP protocol.
+							</p>
+							<p>
+								As part of Progressive Web Apps (PWA), Service Workers will be
+								put in to use to improve the performance of applications and to
+								make it available offline.
+							</p>
+						</div>
+					</div>
+				</li>
+
+				<li data-program="rtw">
+					<input type="checkbox" name="program" id="program-5" />
+					<label for="program-5">Real-Time web</label>
+
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="node-js"><span></span>Node.js</li>
+								<li data-subject="real-time-web"><span></span>Real Time Web</li>
+							</ul>
+						</aside>
+						<div>
+							<p>
+								How to make real-time / live data insightful and accessible,
+								that is what Real-Time Web will be teaching you. With Web
+								Sockets you will be creating an (prototype) application with the
+								data from real time APIs. You could create a chat room,
+								transportation app or multiplayer game for instance.
+							</p>
+						</div>
+					</div>
+				</li>
+
+				<li data-program="wd">
+					<input type="checkbox" name="program" id="program-6" />
+					<label for="program-6">Web design</label>
+
+					<div class="program__description">
+						<aside>
+							<ul>
+								<li data-subject="inclusive-design">
+									<span></span>Inclusive Design
+								</li>
+								<li data-subject="accessibility"><span></span>Accessibility</li>
+								<li data-subject="interaction-design">
+									<span></span>Interaction Design
+								</li>
+							</ul>
+						</aside>
+						<div>
+							<p>
+								Experimenting with Design and User Interface(UI), making use of
+								design principles, verifying design choices, user testing and
+								more. We will show you the ropes of it all.
+							</p>
+							<p>
+								During your time in this course you will be taught how to make
+								use of several UI principles. You will also be introduced to the
+								other side of designing for everyone (Inclusive Design), namely
+								Exclusive Design. The design choices you have made you will also
+								be verifying with real users.
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section id="p-sign-up" class="sign-up__container">
+			<h2>Are you ready to join?</h2>
+			<button><a href="http://sis.hva.nl">Sign up!</a></button>
+		</section>
 	<script type="text/javascript" src="main.js"></script></body>
 </html>

@@ -783,6 +783,9 @@ a {
   .sign-up__container h2 {
     margin-top: -30%;
     margin-bottom: 1.6rem; }
+  .sign-up__container a {
+    color: #fff;
+    text-decoration: none; }
   @media only screen and (min-width: 70rem) {
     .sign-up__container {
       align-items: center;
