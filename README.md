@@ -1,21 +1,11 @@
 # Website Minor Everything Web CMD (re-design)
 
-_Doc/Progress in progress_
+A re-design of the Minor Everything Web (Web Development) at HvA by the course Communication and Multimedia Design (CMD). Re-design started based on this [website](https://cmda.github.io/minor-everything-web/) of 20-04-2018 (Dutch)
 
-Challenge:
-A few self imposed challenges. I will try to adhere as much as possible to accomplish these.
-
-- Make all functionality in HTML & CSS only
-- Try to refrain using JS for core functionality
-
-Extra note:
-
-SCSS approach: Easy to maintain, duplicate assignments
-Global changes will be a hassle
+Redesign can be found [here](https://kyunwang.github.io/minor-everything-web-website/)
 
 # Table of Content
 
-- [Introduction](#Introduction)
 - [Getting started](#Getting-started)
 - [User scenario](#User-scenario)
 - [Design](#design)
@@ -26,12 +16,6 @@ Global changes will be a hassle
 - [User test](#User-test)
 - [Principles](#Principles)
 - [Changes for school](#Changes-for-school)
-
-## Introduction
-
-A re-design of the Minor Everything Web (Web Development) at HvA by the course Communication and Multimedia Design (CMD). Re-design started based on this [website](https://cmda.github.io/minor-everything-web/) of 20-04-2018 (Dutch)
-
-Redesign can be found [here](https://kyunwang.github.io/minor-everything-web-website/)
 
 ## Getting started
 
