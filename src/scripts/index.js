@@ -160,7 +160,7 @@ function addObserver(element, cb, options = {}) {
 	};
 
 	const nodes = {
-		mainSections: $$('body > div > section'),
+		mainSections: $$('body > section'),
 		menuItems: $$('.menu__container a'),
 		originalProgram: document.getElementById('p-program'),
 		allPrograms: $$(`[data-program]`),
