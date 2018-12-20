@@ -79,7 +79,7 @@ Start design to use as starting point for code and testing with users
 
 ![](docs/design.jpg)
 
-<details>
+</details>
 
 ### Design feedback
 
