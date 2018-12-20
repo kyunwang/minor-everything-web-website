@@ -25,6 +25,7 @@ Global changes will be a hassle
   - [Digital feedback](#Digital-feedback)
 - [User test](#User-test)
 - [Principles](#Principles)
+- [Changes for school](#Changes-for-school)
 
 ## Introduction
 
