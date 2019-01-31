@@ -146,4 +146,4 @@ Few principles used which are listed on [bokardo](http://bokardo.com/principles-
 
 - Hand icon is from [juliebonnemoy.com](https://juliebonnemoy.com/)
   (Shoot me a message if I need to remove it)
-- The CSS Editor animation is from my fellows during the minor from [here](https://github.com/baskager/redesign-minor-web-dev/blob/develop/app/src/js/the-wow-header.js)
+- The CSS Editor animation is from my fellows during the minor from [here.](https://github.com/baskager/redesign-minor-web-dev/blob/develop/app/src/js/the-wow-header.js)
